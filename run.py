@@ -14,11 +14,6 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open("Quizmaster")
 
 
-# sport = SHEET.worksheet("sport").get_all_values()
-# shuffle(sport)
-# print(sport)
-
-
 def choose_category():
     """
     Ask user to choose a category from a list.
@@ -45,8 +40,22 @@ def choose_category():
                     return "geography"
 
 
+def load_game(category):
+    """
+    Use the selected category from the user to load the correct worksheet.
+    The worksheet contains the question and the answer in a list of lists
+    """
+    game = SHEET.worksheet(category).get_all_values()
+    total = len(game)
+    print(f"You have chosen the category: {category.capitalize()}\n"
+          f"We have a total of {total} questions for you. Good luck!\n"
+          )
+    shuffle(game)
+
+
 def main():
-    choose_category()
+    category = choose_category()
+    load_game(category)
 
 
 print("Welcome to QUIZMASTER!\n"
