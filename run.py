@@ -18,7 +18,7 @@ def choose_category():
     """
     Ask user to choose a category from a list.
     Data is validated within this function to ensure a valid selection is made.
-    To avoide spelling errors and typos,
+    To avoid spelling errors and typos,
     the user just has to type the corresponding category number instead.
     """
     while True:
@@ -79,10 +79,22 @@ def start_game(game):
     return correct_answers
 
 
+def game_over(category, result, game):
+    """
+    Print a game over message to the user which
+    includes the category, amount of correct answers and total questions
+    """
+    print("CONGRATULATIONS!\n"
+          f"You have completed the category of {category.capitalize()} and\n"
+          f"managed to get {result} out of {len(game)} answers correct."
+          )
+
+
 def main():
     category = choose_category()
     game = load_game(category)
-    start_game(game)
+    result = start_game(game)
+    game_over(category, result, game)
 
 
 print("Welcome to QUIZMASTER!\n"
