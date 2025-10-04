@@ -14,6 +14,41 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open("Quizmaster")
 
 
+# sport = SHEET.worksheet("sport").get_all_values()
+# shuffle(sport)
+# print(sport)
+
+
+def choose_category():
+    """
+    Ask user to choose a category from a list.
+    Data is validated within this function to ensure a valid selection is made.
+    To avoide spelling errors and typos,
+    the user just has to type the corresponding category number instead.
+    """
+    while True:
+        try:
+            category = int(input("Choose your category: \n"))
+            if category < 1 or category > 3:
+                raise ValueError(
+                    "Your selection is invalid, choose one number between 1-3")
+        except ValueError as e:
+            print(f"{e}, choose one number between 1-3")
+            continue
+        else:
+            match category:
+                case 1:
+                    return "sport"
+                case 2:
+                    return "science"
+                case 3:
+                    return "geography"
+
+
+def main():
+    choose_category()
+
+
 print("Welcome to QUIZMASTER!\n"
       "\n"
       "The rules are simple:\n"
@@ -27,3 +62,5 @@ print("Welcome to QUIZMASTER!\n"
       "3 - Geography\n"
       "\n"
       )
+
+main()
