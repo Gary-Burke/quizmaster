@@ -86,15 +86,14 @@ def main():
 print("Welcome to QUIZMASTER!\n"
       "\n"
       "The rules are simple:\n"
-      "1. Press Enter to submit your responses\n"
-      "2. Choose a category by typing the corresponding number\n"
-      "3. Spelling matters!\n"
+      " - Press Enter to submit your responses\n"
+      " - Choose a category by typing the corresponding number\n"
+      " - Spelling matters!\n"
       "\n"
       "Categories:\n"
-      "1 - Sport\n"
-      "2 - Science\n"
-      "3 - Geography\n"
-      "\n"
+      " 1 - Sport\n"
+      " 2 - Science\n"
+      " 3 - Geography\n"
       )
 
 main()
