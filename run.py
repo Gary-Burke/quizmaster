@@ -41,7 +41,8 @@ def choose_category():
 def load_game(category):
     """
     Use the selected category from the user to load the correct worksheet.
-    The worksheet contains the question and the answer in a list of lists
+    The worksheet contains the question and the answer in a list of lists.
+    Randomize the order with shuffle method and return the list of lists
     """
     game = SHEET.worksheet(category).get_all_values()
     total = len(game)
@@ -49,11 +50,26 @@ def load_game(category):
           f"We have a total of {total} questions for you. Good luck!\n"
           )
     shuffle(game)
+    return game
+
+
+def start_game(game):
+    """
+    Loop through the list of lists returned from function load_game.
+    Display one question and ask user for an answer.
+    Check user answer against stored answer and provide feedback.
+    """
+    total_questions = len(game)
+    question_counter = 0
+
+    while question_counter < total_questions:
+        pass
 
 
 def main():
     category = choose_category()
-    load_game(category)
+    game = load_game(category)
+    start_game(game)
 
 
 print("Welcome to QUIZMASTER!\n"
