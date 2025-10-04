@@ -62,19 +62,21 @@ def start_game(game):
     """
     total_questions = len(game)
     question_counter = 0
-    correct_answer = 0
+    correct_answers = 0
 
     while question_counter < total_questions:
         print(f"Question {question_counter + 1}: {game[question_counter][0]}")
         user_answer = input("Your answer: \n")
         if user_answer.lower() == game[question_counter][1].lower():
             print("That is correct!\n")
-            correct_answer += 1
+            correct_answers += 1
         else:
             print(f"That is incorrect! The correct answer is:\n"
                   f"{game[question_counter][1]}\n"
                   )
         question_counter += 1
+
+    return correct_answers
 
 
 def main():
