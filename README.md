@@ -44,7 +44,8 @@ I've used [Lucidchart](https://www.lucidchart.com/pages/examples/flowchart-maker
 **User Flow**
 1. User opens the app → Sees the rules and categories listed.
 2. User selects a category → Inputs number to chooses category.
-3. User supplies his name → Inputs name into the input field
+3. Program gets the corresponding worksheet from Google Sheets for the quiz.
+3. Program asks user for his name → User inputs name into the input field
 4. User sees start game message → The user name, selected category and total number of questions are displayed
 5. User sees first question → User supplies answer
 6. User gets feedback → Asnwer was correct or incorrect
@@ -59,30 +60,18 @@ I've used [Lucidchart](https://www.lucidchart.com/pages/examples/flowchart-maker
 
 | Feature | Notes | Screenshot |
 | --- | --- | --- |
-| Data Input Validation | The program validates user input by ensuring the data is exactly six comma-separated numbers before continuing. | ![screenshot](documentation/features/data-validation.png) |
-| API Update | Sales, surplus, and stock data are updated in the relevant Google Sheets worksheet using gspread functionality. | ![screenshot](documentation/features/api-update.png) |
-| Surplus Calculation | Calculates surplus by comparing the latest stock and sales data to identify potential waste or shortages. | ![screenshot](documentation/features/surplus-calculation.png) |
-| Last 5 Sales Entries | Retrieves the last five sales entries from the "sales" worksheet for calculating stock averages. | ![screenshot](documentation/features/latest-entries.png) |
-| Stock Calculation | Computes stock based on the last 5 sales entries, adding 10% to the average to ensure adequate future stock. | ![screenshot](documentation/features/stock-calculation.png) |
-| Sales Data Automation | Automates the entire process of retrieving, validating, and updating sales, surplus, and stock data in Google Sheets. | ![screenshot](documentation/features/sales-data.png) |
+| Category Selection | The user can choose which category he wants to be quizzed on. This makes the game more versatile and fun. | ![screenshot](documentation/features/01-category.png) |
+| Add Name | The user gets to add his name for the game. This is used to provide a customized message to the user, making him feel welcomed. | ![screenshot](documentation/features/02-name.png) |
+| Welcome Message | The program greets the user by name, confirms the selected category and displays the amount of questions. This gives the user all the information needed as the game is about to start. | ![screenshot](documentation/features/03-welcome.png) |
+| Questions Feedback | The program informs the player when an answer is correct or incorrect and if inccorect, provides the actual answer. Although the input is spelling sensitive, it is not case sensitive. This provides a better player experience. | ![screenshot](documentation/features/04-quiz-feedback.png) |
+| Game Over Message | The program informs the player when the quiz has been completed with a customized message, which also provides feedback on how many questions the player got correct. This adds a competitive edge to the game. | ![screenshot](documentation/features/05-game-over.png) |
 
 ### Future Features
 
+- **Spelling and typos**: As this game relies on user input, it would be beneficial to add rules or exceptions, to catch spelling mistakes, typos or alternative spellings from the user and account for them.
+- **Add more categories**: I would like to expand the game by adding several more categories of question to choose from.
+- **High Score API**: It would add value to the game to be able to store and track the high scores for each player and their various categories.
 
-- **User Authentication and Role Management**: Implement a login system with roles (e.g., admin, employee) to restrict data access based on user roles.
-- **Data Visualization**: Add charts and graphs to visually represent sales trends, stock levels, and surplus/waste over time.
-- **Real-time Data Sync**: Integrate real-time syncing of sales and stock data across multiple devices to support live updates.
-- **Automated Restocking Alerts**: Notify users when stock levels fall below a certain threshold, prompting restock orders.
-- **Predictive Analytics**: Use historical sales data to predict future demand, helping to optimize stock levels and minimize waste.
-- **Multilingual Support**: Add support for multiple languages to make the app more accessible to a global audience.
-- **Mobile App Integration**: Develop a mobile version of the app for easier data input and stock management on the go.
-- **Reporting and Exporting**: Generate and export detailed reports in PDF or CSV format for deeper analysis of sales, surplus, and stock data.
-- **Inventory Management**: Include functionality to track supplier information, order inventory, and manage costs directly within the app.
-- **Customer Feedback Integration**: Allow customers to leave feedback on sold items, giving insight into sales performance and customer satisfaction.
-- **Customizable Dashboards**: Provide users with the ability to customize their dashboard, selecting which data points and metrics they want to monitor.
-- **Historical Data Comparison**: Implement functionality to compare current sales and stock data with data from the same period in previous years.
-- **Seasonal Adjustment Recommendations**: Analyze sales patterns and suggest stock adjustments for holidays or other seasonal trends.
-- **API Integration**: Provide an API for integrating with other third-party services, such as point-of-sale systems or accounting software.
 
 ## Tools & Technologies
 
