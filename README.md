@@ -13,7 +13,8 @@ Quizmaster is a fun and inter-active general knowledge game to be played by indi
 The main goal of the app, is to test a player's knowledge in a certain field or category and at the same time, expand their knowledge in that specific field.
 Since this is a Command Line interface, I opted for an app where graphics and visual ques are not needed. Playing and learning at the same time makes quiz games fun and exciting, that is why I chose to develop Quizmaster.
 
-source: [quizmaster amiresponsive](https://ui.dev/amiresponsive?url=https://quizmaster-game-dfe6a1b8c370.herokuapp.com)
+![quizmaster amiresponsive](documentation/readme/amiresponsive.png)
+
 
 ## UX
 
