@@ -82,13 +82,14 @@ I've used [Lucidchart](https://www.lucidchart.com/pages/examples/flowchart-maker
 
 | Target | Expectation | Outcome |
 | --- | --- | --- |
-| As a user | it would be good to see a clear and concise landing page | so that I know what the game is about. |
-| As a user | I want to see the rules clearly seperated from the welcome message | and kept short and direct. |
-| As a user | it would be exciting if I could choose different categories | with which to play the quiz game. |
-| As a user | it would be good to know how many questions there are in the selected quiz | so as to know the length of the game. |
-| As a user | my input needs to be validated and a clear error message needs to be displayed when my input is invalid |  so as to ensure a proper and smooth gaming experience. |
-| As a user |  I want to get feedback on my answers, whether they are right or wrong | and if wrong, I want to know what the actual correct answer is. |
-| As a user |  I would like to be able to submit my name in the game | to get a personalized feedback when the game is over. |
+|  | it would be good to see a clear and concise landing page | so that I know what the game is about. |
+| As a player | I want to see the rules clearly seperated from the welcome message | and kept short and direct. |
+| As a player | it would be exciting if I could choose different categories | with which to play the quiz game. |
+| As a player | it would be good to know how many questions there are in the selected quiz | so as to know the length of the game. |
+| As a player | my input needs to be validated and a clear error message needs to be displayed when my input is invalid |  so as to ensure a proper and smooth gaming experience. |
+| As a player |  I want to get feedback on my answers, whether they are right or wrong | and if wrong, I want to know what the actual correct answer is. |
+| As a player |  I would like to be able to submit my name in the game | to get a personalized feedback when the game is over. |
+| As a player |  it would be a good experience to see how many answers I got correct | so that I can challenge myself again next time. |
 
 ## Features
 
