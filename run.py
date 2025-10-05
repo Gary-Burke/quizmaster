@@ -65,7 +65,7 @@ def start_game(game):
     correct_answers = 0
 
     while question_counter < total_questions:
-        print(f"Question {question_counter + 1}: {game[question_counter][0]}")
+        print(f"Question {question_counter + 1}:\n{game[question_counter][0]}")
         user_answer = input("Your answer:\n")
         if user_answer.lower() == game[question_counter][1].lower():
             print("That is correct!\n")
@@ -85,8 +85,8 @@ def game_over(category, result, game):
     includes the category, amount of correct answers and total questions
     """
     print("CONGRATULATIONS!\n"
-          f"You have completed the category of {category.capitalize()} and\n"
-          f"managed to get {result} out of {len(game)} answers correct."
+          f"You have completed the category of {category.capitalize()} and "
+          f"managed to get {result}/{len(game)} answers correct."
           )
 
 
