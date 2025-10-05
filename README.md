@@ -7,7 +7,7 @@ Developer: Gary Burke ([Gary-Burke](https://www.github.com/Gary-Burke))
 [![GitHub repo size](https://img.shields.io/github/repo-size/Gary-Burke/quizmaster)](https://www.github.com/Gary-Burke/quizmaster)
 [![badge](https://img.shields.io/badge/deployment-Heroku-purple)](https://quizmaster-game-dfe6a1b8c370.herokuapp.com)
 
-## Introduction ##
+## Introduction
 
 Quizmaster is a fun and inter-active general knowledge game to be played by individuals.
 The main goal of the app, is to test a player's knowledge in a certain field or category and at the same time, expand their knowledge in that specific field.
@@ -55,14 +55,6 @@ I've used [Lucidchart](https://www.lucidchart.com/pages/examples/flowchart-maker
 
 ### Features
 
-⚠️ INSTRUCTIONS ⚠️
-
-In this section, you should go over the different parts of your project, and describe each feature. You should explain what value each of the features provides for the user, focusing on your target audience, what they want to achieve, and how your project can help them achieve these things.
-
-**IMPORTANT**: Remember to always include a screenshot of each individual feature!
-
-⚠️ --- END --- ⚠️
-
 ### Existing Features
 
 | Feature | Notes | Screenshot |
@@ -76,13 +68,6 @@ In this section, you should go over the different parts of your project, and des
 
 ### Future Features
 
-⚠️ INSTRUCTIONS ⚠️
-
-Do you have additional ideas that you'd like to include on your project in the future? Fantastic, list them here! It's always great to have plans for future improvements. Consider adding any helpful links or notes to help remind you in the future, if you revisit the project in a couple years.
-
-A few examples are listed below to align with possible ways to improve on the sample walkthrough project, to give you some inspiration.
-
-⚠️ --- END ---⚠️
 
 - **User Authentication and Role Management**: Implement a login system with roles (e.g., admin, employee) to restrict data access based on user roles.
 - **Data Visualization**: Add charts and graphs to visually represent sales trends, stock levels, and surplus/waste over time.
