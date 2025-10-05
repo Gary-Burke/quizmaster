@@ -24,7 +24,7 @@ def choose_category():
     while True:
         try:
             category = int(input("Choose your category:\n"))
-            if category < 1 or category > 3:
+            if category < 1 or category > 4:
                 raise ValueError
         except ValueError:
             print("Invalid input. Please enter a number between 1-3")
@@ -36,6 +36,8 @@ def choose_category():
                     return "science"
                 case 3:
                     return "geography"
+                case 4:
+                    return "history"
 
 
 def get_player_name():
@@ -132,6 +134,7 @@ print("Welcome to QUIZMASTER!\n"
       " 1 - Sport\n"
       " 2 - Science\n"
       " 3 - Geography\n"
+      " 4 - History\n"
       )
 
 main()
