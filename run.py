@@ -23,7 +23,7 @@ def choose_category():
     """
     while True:
         try:
-            category = int(input("Choose your category: \n"))
+            category = int(input("Choose your category:\n"))
             if category < 1 or category > 3:
                 raise ValueError
         except ValueError:
@@ -66,7 +66,7 @@ def start_game(game):
 
     while question_counter < total_questions:
         print(f"Question {question_counter + 1}: {game[question_counter][0]}")
-        user_answer = input("Your answer: \n")
+        user_answer = input("Your answer:\n")
         if user_answer.lower() == game[question_counter][1].lower():
             print("That is correct!\n")
             correct_answers += 1
