@@ -18,71 +18,11 @@ Since this is a Command Line interface, I opted for an app where graphics and vi
 
 ## UX
 
-### The 5 Planes of UX
-
-⚠️ NOTE: make sure to update the text below to match your own project! ⚠️
-
-#### 1. Strategy
-
-**Purpose**
-- Provide users with a simple and effective way to track daily sandwich sales and analyze trends over time.
-- Help users optimize sandwich production to reduce waste and meet demand efficiently.
-
-**Primary User Needs**
-- Track daily sales by sandwich type with minimal effort.
-- Analyze sales data for trends and insights.
-- Receive suggestions for future sandwich production.
-
-**Business Goals**
-- Offer a reliable tool for tracking sales and optimizing inventory.
-- Help businesses reduce waste and improve customer satisfaction through better forecasting.
-
-#### 2. Scope
-
-**[Features](#features)** (see below)
-
-**Content Requirements**
-- Input form for daily sandwich sales.
-- Display of total daily sales and breakdown by sandwich type.
-- Trend analysis over specified time periods (e.g., week, month).
-- Category filters for sandwich types (e.g., vegetarian, meat, cheese).
-- Suggested production numbers for the next day based on sales data.
-
-#### 3. Structure
-
-**Information Architecture**
-- **Hierarchy**:
-  - Daily sales input form as the primary focus for ease of use.
-
-**User Flow**
-1. User opens the app → inputs daily sandwich sales data.
-2. User views a summary of the day’s sales → checks breakdown by type.
-3. User views Trends → analyzes sales trends over time.
-4. User receives suggested production numbers for the next day.
-5. User logs data quickly and returns to shop activities.
-
-#### 4. Skeleton
-
-**[Wireframes](#wireframes)** (see below)
-
-#### 5. Surface
-
-**Visual Design Elements**
-- **[Colours](#colour-scheme)** (see below)
-- **[Typography](#typography)** (see below)
-
-## Wireframes
-
-To follow best practice, a flowchart was created to showcase the progression of the Python app.
-I've used [Lucidchart](https://www.lucidchart.com/pages/examples/flowchart-maker) to design my app flowchart.
-
-![screenshot](documentation/readme/flowchart.png)
-
-## User Stories
+### User Stories
 
 | Target | Expectation | Outcome |
 | --- | --- | --- |
-|  | it would be good to see a clear and concise landing page | so that I know what the game is about. |
+| As a player | it would be good to see a clear and concise landing page | so that I know what the game is about. |
 | As a player | I want to see the rules clearly seperated from the welcome message | and kept short and direct. |
 | As a player | it would be exciting if I could choose different categories | with which to play the quiz game. |
 | As a player | it would be good to know how many questions there are in the selected quiz | so as to know the length of the game. |
@@ -91,7 +31,29 @@ I've used [Lucidchart](https://www.lucidchart.com/pages/examples/flowchart-maker
 | As a player |  I would like to be able to submit my name in the game | to get a personalized feedback when the game is over. |
 | As a player |  it would be a good experience to see how many answers I got correct | so that I can challenge myself again next time. |
 
-## Features
+
+### Wireframes
+
+To follow best practice, a flowchart was created to showcase the progression of the Python app.
+I've used [Lucidchart](https://www.lucidchart.com/pages/examples/flowchart-maker) to design my app flowchart.
+
+![screenshot](documentation/readme/flowchart.png)
+
+### Structure
+
+**User Flow**
+1. User opens the app → Sees the rules and categories listed.
+2. User selects a category → Inputs number to chooses category.
+3. User supplies his name → Inputs name into the input field
+4. User sees start game message → The user name, selected category and total number of questions are displayed
+5. User sees first question → User supplies answer
+6. User gets feedback → Asnwer was correct or incorrect
+7. User gets feedback → If answer was incorrect, then correct answer is displayed
+8. User sees next question → Game repeats until all questions have been cycled through
+9. App informs user that the game is over and how many answers he got correct.
+
+
+### Features
 
 ⚠️ INSTRUCTIONS ⚠️
 
