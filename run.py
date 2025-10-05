@@ -27,7 +27,7 @@ def choose_category():
             if category < 1 or category > 4:
                 raise ValueError
         except ValueError:
-            print("Invalid input. Please enter a number between 1-3")
+            print("Invalid input. Please enter a number between 1-4")
         else:
             match category:
                 case 1:
