@@ -76,7 +76,7 @@ Since this is a Command Line interface, I opted for an app where graphics and vi
 To follow best practice, a flowchart was created to showcase the progression of the Python app.
 I've used [Lucidchart](https://www.lucidchart.com/pages/examples/flowchart-maker) to design my app flowchart.
 
-![screenshot](documentation/flowchart.png)
+![screenshot](documentation/readme/flowchart.png)
 
 ## User Stories
 
