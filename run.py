@@ -44,7 +44,7 @@ def get_player_name():
     used in a personalized message when the game is over.
     """
     print("\nFirst and most important question:")
-    player_name = input("What is your name?\n")
+    player_name = validate_empty_input("What is your name?\n")
     return player_name
 
 
@@ -77,8 +77,8 @@ def start_game(game):
 
     while question_counter < total_questions:
         print(f"Question {question_counter + 1}:\n{game[question_counter][0]}")
-        user_answer = input("Your answer:\n")
-        if user_answer.lower() == game[question_counter][1].lower():
+        user_answer = validate_empty_input("Your answer:\n")
+        if user_answer.lower() == game[question_counter][1].strip().lower():
             print("That is correct!\n")
             correct_answers += 1
         else:
@@ -99,6 +99,18 @@ def game_over(player, category, result, game):
           f"You have completed the category of {category.capitalize()}.\n"
           f"You managed to get {result}/{len(game)} answers correct."
           )
+
+
+# Solution for empty input from user from ChatGPT
+def validate_empty_input(prompt):
+    """
+    Validates user input and ensures they don't submit an empty field
+    """
+    while True:
+        data = input(prompt).strip()
+        if data:
+            return data
+        print("You can't submit an empty response. Please try again.")
 
 
 def main():
