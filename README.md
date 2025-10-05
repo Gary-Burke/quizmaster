@@ -80,22 +80,15 @@ I've used [Lucidchart](https://www.lucidchart.com/pages/examples/flowchart-maker
 
 ## User Stories
 
-⚠️ INSTRUCTIONS ⚠️
-
-In this section, list all of your possible user stories for the project. Samples have been provided below using the example walkthrough project for your inspiration. Make sure to adjust to match your own project features!
-
-⚠️ --- END --- ⚠️
-
 | Target | Expectation | Outcome |
 | --- | --- | --- |
-| As a user | I would like to input the number of each sandwich type sold during the day | so that I can track daily sales accurately. |
-| As a user | I would like to view a breakdown of total sandwich sales by type | so that I can easily see which sandwiches are the most and least popular. |
-| As a user | I would like the application to calculate the total sandwiches sold for the day | so that I don’t have to do manual sums. |
-| As a user | I would like to see a trend of sandwich sales over time (e.g., week, month) | so that I can identify which sandwiches are consistently popular. |
-| As a user | I would like the application to suggest an estimated number of each sandwich type to make for the next day, based on past sales data | so that I can minimize waste and shortages. |
-| As a user | I would like the app to categorize sandwiches by type (e.g., vegetarian, meat, cheese) | so that I can track popularity within different dietary categories. |
-| As a user | I would like to input sales quickly with minimal typing | so that I can focus on running the shop instead of logging data. |
-| As a user | I would like the app to be intuitive and easy to use | so that I can start tracking sales without needing extensive training. |
+| As a user | it would be good to see a clear and concise landing page | so that I know what the game is about. |
+| As a user | I want to see the rules clearly seperated from the welcome message | and kept short and direct. |
+| As a user | it would be exciting if I could choose different categories | with which to play the quiz game. |
+| As a user | it would be good to know how many questions there are in the selected quiz | so as to know the length of the game. |
+| As a user | my input needs to be validated and a clear error message needs to be displayed when my input is invalid |  so as to ensure a proper and smooth gaming experience. |
+| As a user |  I want to get feedback on my answers, whether they are right or wrong | and if wrong, I want to know what the actual correct answer is. |
+| As a user |  I would like to be able to submit my name in the game | to get a personalized feedback when the game is over. |
 
 ## Features
 
