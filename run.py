@@ -104,7 +104,7 @@ def game_over(player, category, result, game):
 def main():
     category = choose_category()
     player = get_player_name()
-    game = load_game(category)
+    game = load_game(player, category)
     result = start_game(game)
     game_over(player, category, result, game)
 
