@@ -38,7 +38,17 @@ def choose_category():
                     return "geography"
 
 
-def load_game(category):
+def get_player_name():
+    """
+    Ask user to supply their name so that it can be
+    used in a personalized message when the game is over.
+    """
+    print("\nFirst and most important question:")
+    player_name = input("What is your name?\n")
+    return player_name
+
+
+def load_game(player, category):
     """
     Use the selected category from the user to load the correct worksheet.
     The worksheet contains the question and the answer in a list of lists.
@@ -46,7 +56,8 @@ def load_game(category):
     """
     game = SHEET.worksheet(category).get_all_values()
     total = len(game)
-    print(f"You have chosen the category: {category.capitalize()}\n"
+    print(f"\nWelcome {player}!\n"
+          f"You have chosen the category: {category.capitalize()}\n"
           f"We have a total of {total} questions for you. Good luck!\n"
           )
     shuffle(game)
@@ -79,22 +90,23 @@ def start_game(game):
     return correct_answers
 
 
-def game_over(category, result, game):
+def game_over(player, category, result, game):
     """
     Print a game over message to the user which
     includes the category, amount of correct answers and total questions
     """
-    print("CONGRATULATIONS!\n"
-          f"You have completed the category of {category.capitalize()} and "
-          f"managed to get {result}/{len(game)} answers correct."
+    print(f"Well Done {player}!\n"
+          f"You have completed the category of {category.capitalize()}.\n"
+          f"You managed to get {result}/{len(game)} answers correct."
           )
 
 
 def main():
     category = choose_category()
+    player = get_player_name()
     game = load_game(category)
     result = start_game(game)
-    game_over(category, result, game)
+    game_over(player, category, result, game)
 
 
 print("Welcome to QUIZMASTER!\n"
