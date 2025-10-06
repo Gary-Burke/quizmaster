@@ -94,15 +94,6 @@ I've used [Lucidchart](https://www.lucidchart.com/pages/examples/flowchart-maker
 | [![badge](https://img.shields.io/badge/W3Schools-grey?logo=w3schools&logoColor=04AA6D)](https://www.w3schools.com) | Tutorials/Reference Guide |
 | [![badge](https://img.shields.io/badge/StackOverflow-grey?logo=stackoverflow&logoColor=F58025)](https://stackoverflow.com) | Troubleshooting and Debugging |
 
-⚠️ NOTE ⚠️
-
-Want to add more?
-
-- Tutorial: https://shields.io/badges/static-badge
-- Icons/Logos: https://simpleicons.org
-  - FYI: not all logos are available to use
-
-🛑 --- END --- 🛑
 
 ## Database Design
 
@@ -203,15 +194,9 @@ I've used the following Python packages and external imports.
 
 ### GitHub Projects
 
-⚠️ TIP ⚠️
-
-Consider adding screenshots of your Projects Board(s), Issues (open and closed), and Milestone tasks.
-
-⚠️ --- END ---⚠️
-
 [GitHub Projects](https://www.github.com/Gary-Burke/quizmaster/projects) served as an Agile tool for this project. Through it, EPICs, User Stories, issues/bugs, and Milestone tasks were planned, then subsequently tracked on a regular basis using the Kanban project board.
 
-![screenshot](documentation/gh-projects.png)
+![screenshot](documentation/gh-issues/project.png)
 
 ### GitHub Issues
 
@@ -219,17 +204,17 @@ Consider adding screenshots of your Projects Board(s), Issues (open and closed),
 
 | Link | Screenshot |
 | --- | --- |
-| [![GitHub issues](https://img.shields.io/github/issues-search/Gary-Burke/quizmaster?query=is%3Aissue%20is%3Aopen%20-label%3Abug&label=Open%20Issues&color=yellow)](https://www.github.com/Gary-Burke/quizmaster/issues?q=is%3Aissue%20is%3Aopen%20-label%3Abug) | ![screenshot](documentation/gh-issues-open.png) |
-| [![GitHub closed issues](https://img.shields.io/github/issues-search/Gary-Burke/quizmaster?query=is%3Aissue%20is%3Aclosed%20-label%3Abug&label=Closed%20Issues&color=green)](https://www.github.com/Gary-Burke/quizmaster/issues?q=is%3Aissue%20is%3Aclosed%20-label%3Abug) | ![screenshot](documentation/gh-issues-closed.png) |
+| [![GitHub issues](https://img.shields.io/github/issues-search/Gary-Burke/quizmaster?query=is%3Aissue%20is%3Aopen%20-label%3Abug&label=Open%20Issues&color=yellow)](https://www.github.com/Gary-Burke/quizmaster/issues?q=is%3Aissue%20is%3Aopen%20-label%3Abug) | ![screenshot](documentation/gh-issues/issues-open.png) |
+| [![GitHub closed issues](https://img.shields.io/github/issues-search/Gary-Burke/quizmaster?query=is%3Aissue%20is%3Aclosed%20-label%3Abug&label=Closed%20Issues&color=green)](https://www.github.com/Gary-Burke/quizmaster/issues?q=is%3Aissue%20is%3Aclosed%20-label%3Abug) | ![screenshot](documentation/gh-issues/issues-closed.png) |
 
 ### MoSCoW Prioritization
 
-I've decomposed my Epics into User Stories for prioritizing and implementing them. Using this approach, I was able to apply "MoSCoW" prioritization and labels to my User Stories within the Issues tab.
+I have listed my Epics into User Stories and applied the "MoSCoW" prioritization method with corresponding labels to them, within the Issues tab.
 
-- **Must Have**: guaranteed to be delivered - required to Pass the project (*max ~60% of stories*)
-- **Should Have**: adds significant value, but not vital (*~20% of stories*)
-- **Could Have**: has small impact if left out (*the rest ~20% of stories*)
-- **Won't Have**: not a priority for this iteration - future features
+- **Must Have**: Critical tasks that need to be met for the project to pass.
+- **Should Have**: These are valuable features, but not critical.
+- **Could Have**: Nice to haves, but don't have a crucial impact.
+- **Won't Have**: Future features.
 
 ## Testing
 
