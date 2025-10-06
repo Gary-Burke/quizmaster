@@ -80,13 +80,19 @@ def start_game(game):
     while question_counter < total_questions:
         print(f"Question {question_counter + 1}:\n{game[question_counter][0]}")
         user_answer = validate_empty_input("Your answer:\n")
-        if user_answer.lower() == game[question_counter][1].strip().lower():
-            print("That is correct!\n")
+        correct_answer = game[question_counter][1].strip()
+        alt_correct_answer = game[question_counter][2].strip()
+        if (
+            user_answer.lower() == correct_answer.lower()
+            or user_answer.lower() == alt_correct_answer.lower()
+        ):
+            print(f"{correct_answer} is correct!\n")
             correct_answers += 1
         else:
-            print(f"That is incorrect! The correct answer is:\n"
-                  f"{game[question_counter][1]}\n"
-                  )
+            print(
+                f"{user_answer} is the wrong answer!\n"
+                f"The correct answer is: {correct_answer}\n"
+            )
         question_counter += 1
 
     return correct_answers
