@@ -23,11 +23,11 @@ def choose_category():
     """
     while True:
         try:
-            category = int(input("Choose your category:\n"))
+            category = int(input(" Choose your category:\n"))
             if category < 1 or category > 4:
                 raise ValueError
         except ValueError:
-            print("Invalid input. Please enter a number between 1-4\n")
+            print(" Invalid input. Please enter a number between 1-4\n")
         else:
             match category:
                 case 1:
@@ -45,8 +45,8 @@ def get_player_name():
     Ask user to supply their name so that it can be
     used in a personalized message when the game is over.
     """
-    print("\nFirst and most important question:")
-    player_name = validate_empty_input("What is your name?\n")
+    print("\n First and most important question:")
+    player_name = validate_empty_input(" What is your name?\n")
     return player_name
 
 
@@ -58,9 +58,9 @@ def load_game(player, category):
     """
     game = SHEET.worksheet(category).get_all_values()
     total = len(game)
-    print(f"\nWelcome {player}!\n"
-          f"You have chosen the category: {category.capitalize()}\n"
-          f"We have a total of {total} questions for you. Good luck!\n"
+    print(f"\n Welcome {player}!\n"
+          f" You have chosen the category: {category.capitalize()}\n"
+          f" We have a total of {total} questions for you. Good luck!\n"
           )
     shuffle(game)
     return game
@@ -78,20 +78,23 @@ def start_game(game):
     correct_answers = 0
 
     while question_counter < total_questions:
-        print(f"Question {question_counter + 1}:\n{game[question_counter][0]}")
-        user_answer = validate_empty_input("Your answer:\n")
+        print(
+            f" Question {question_counter + 1}:"
+            f" {game[question_counter][0]}"
+        )
+        user_answer = validate_empty_input(" Your answer:\n")
         correct_answer = game[question_counter][1].strip()
         alt_correct_answer = game[question_counter][2].strip()
         if (
             user_answer.lower() == correct_answer.lower()
             or user_answer.lower() == alt_correct_answer.lower()
         ):
-            print(f"{correct_answer} is correct!\n")
+            print(f" {correct_answer} is correct!\n")
             correct_answers += 1
         else:
             print(
-                f"{user_answer} is the wrong answer!\n"
-                f"The correct answer is: {correct_answer}\n"
+                f" {user_answer} is the wrong answer!\n"
+                f" The correct answer is: {correct_answer}\n"
             )
         question_counter += 1
 
@@ -104,9 +107,9 @@ def game_over(player, category, result, game):
     includes the category, amount of correct answers and total questions
     """
     print(
-        f"Well Done {player}!\n"
-        f"You have completed the category of {category.capitalize()}.\n"
-        f"You managed to get {result}/{len(game)} answers correct."
+        f" Well Done {player}!\n"
+        f" You have completed the category of {category.capitalize()}.\n"
+        f" You managed to get {result}/{len(game)} answers correct."
     )
 
 
@@ -119,7 +122,7 @@ def validate_empty_input(prompt):
         data = input(prompt).strip()
         if data:
             return data
-        print("You can't submit an empty response. Please try again.")
+        print(" You can't submit an empty response. Please try again.")
 
 
 def main():
