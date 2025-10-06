@@ -30,6 +30,7 @@ Since this is a Command Line interface, I opted for an app where graphics and vi
 | As a player |  I want to get feedback on my answers, whether they are right or wrong | and if wrong, I want to know what the actual correct answer is. |
 | As a player |  I would like to be able to submit my name in the game | to get a personalized feedback when the game is over. |
 | As a player |  it would be a good experience to see how many answers I got correct | so that I can challenge myself again next time. |
+| As a player |   I would like to be able to answer a question with a number or with text, e.g. "2" or "Two" | this would add to the user experience. |
 
 
 ### Wireframes
@@ -63,7 +64,8 @@ I've used [Lucidchart](https://www.lucidchart.com/pages/examples/flowchart-maker
 | Category Selection | The user can choose which category he wants to be quizzed on. This makes the game more versatile and fun. | ![screenshot](documentation/features/01-category.png) |
 | Add Name | The user gets to add his name for the game. This is used to provide a customized message to the user, making him feel welcomed. | ![screenshot](documentation/features/02-name.png) |
 | Welcome Message | The program greets the user by name, confirms the selected category and displays the amount of questions. This gives the user all the information needed as the game is about to start. | ![screenshot](documentation/features/03-welcome.png) |
-| Questions Feedback | The program informs the player when an answer is correct or incorrect and if inccorect, provides the actual answer. Although the input is spelling sensitive, it is not case sensitive. This provides a better player experience. | ![screenshot](documentation/features/04-quiz-feedback.png) |
+| Questions Feedback | The program informs the player when an answer is correct or incorrect and if incorrect, provides the actual answer. Although the input is spelling sensitive, it is not case sensitive. This provides a better player experience. | ![screenshot](documentation/features/04-quiz-feedback.png) |
+|  | The program makes provision for answers to be written in both words or numbers, when applicable, e.g. "Two" or "2". In some cases typos and spelling mistakes are accounted for but this is not extensive. | ![screenshot](documentation/features/04-quiz-feedback.png) |
 | Game Over Message | The program informs the player when the quiz has been completed with a customized message, which also provides feedback on how many questions the player got correct. This adds a competitive edge to the game. | ![screenshot](documentation/features/05-game-over.png) |
 
 ### Future Features
