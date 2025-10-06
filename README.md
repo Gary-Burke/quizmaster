@@ -372,26 +372,23 @@ There are no remaining major differences between the local version when compared
 | [Markdown Builder](https://markdown.2bn.dev) | Help generating Markdown files |
 | [Chris Beams](https://chris.beams.io/posts/git-commit) | "How to Write a Git Commit Message" |
 | [Love Sandwiches](https://codeinstitute.net) | Code Institute walkthrough project inspiration |
-| [Real Python](https://realpython.com/python-quiz-application) | Inspiration for a quiz app |
-| [BroCode](https://www.youtube.com/watch?v=ag8NtD1e0Kc) | Inspiration for hangman game |
 | [Python Tutor](https://pythontutor.com) | Additional Python help |
-| [Colorama](https://www.youtube.com/watch?v=u51Zjlnui4Y) | Adding color in Python |
-| [StackOverflow](https://stackoverflow.com/a/50921841) | Clear screen in Python |
+| [StackOverflow](https://stackoverflow.com/a/18449421/30846754) | Accessing a list of lists |
 | [ChatGPT](https://chatgpt.com) | Help with code logic and explanations |
+| [Towards Data Science](https://towardsdatascience.com/20-newbie-mistakes-that-even-skilled-python-programmers-make-6879048731a4/) | 20 Newbie Mistakes that Even Skilled Python Programmers Make |
 
 ### Media
 
 | Source | Notes |
 | --- | --- |
-| [ASCII Art Archive](https://www.asciiart.eu) | Pre-defined ASCII art |
-| [TEXT-IMAGE](https://www.text-image.com) | Converting an image to ASCII art |
-| [Patorjk](https://patorjk.com/software/taag) | Converting text to ASCII art |
+| [Pigeonhole Live BLog](https://blog.pigeonholelive.com/sports-trivia-questions-110-fun-questions-and-answers-to-test-your-knowledge) | Sports quiz questions |
+| [AhaSlides](https://ahaslides.com/blog/science-trivia-questions/) | Science quiz questions |
+| [TODAY](https://www.today.com/life/inspiration/geography-trivia-rcna160252) | Geography quiz questions |
+| [TODAY](https://www.today.com/life/inspiration/history-trivia-rcna217505) | History quiz questions |
 
 ### Acknowledgements
 
 - I would like to thank my Code Institute mentor, [Tim Nelson](https://www.github.com/TravelTimN) for the support throughout the development of this project.
-- I would like to thank the [Code Institute](https://codeinstitute.net) Tutor Team for their assistance with troubleshooting and debugging some project issues.
-- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) and [Code Institute Discord community](https://discord-portal.codeinstitute.net) for the moral support; it kept me going during periods of self doubt and impostor syndrome.
-- I would like to thank my partner, for believing in me, and allowing me to make this transition into software development.
-- I would like to thank my employer, for supporting me in my career development change towards becoming a software developer.
+- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) and [Code Institute Discord community](https://discord-portal.codeinstitute.net) for their feedback and assistance with technical problems and solutions.
+- I would like to thank my wife for her support and encouragement during this learning experience.
 
