@@ -97,10 +97,11 @@ def game_over(player, category, result, game):
     Print a game over message to the user which
     includes the category, amount of correct answers and total questions
     """
-    print(f"Well Done {player}!\n"
-          f"You have completed the category of {category.capitalize()}.\n"
-          f"You managed to get {result}/{len(game)} answers correct."
-          )
+    print(
+        f"Well Done {player}!\n"
+        f"You have completed the category of {category.capitalize()}.\n"
+        f"You managed to get {result}/{len(game)} answers correct."
+    )
 
 
 # Solution for empty input from user from ChatGPT
@@ -123,18 +124,19 @@ def main():
     game_over(player, category, result, game)
 
 
-print("Welcome to QUIZMASTER!\n"
-      "\n"
-      "The rules are simple:\n"
-      " - Press Enter to submit your responses\n"
-      " - Choose a category by typing the corresponding number\n"
-      " - Spelling matters!\n"
-      "\n"
-      "Categories:\n"
-      " 1 - Sport\n"
-      " 2 - Science\n"
-      " 3 - Geography\n"
-      " 4 - History\n"
-      )
+print(
+    "Welcome to QUIZMASTER!\n"
+    "\n"
+    "The rules are simple:\n"
+    " - Press Enter to submit your responses\n"
+    " - Choose a category by typing the corresponding number\n"
+    " - Spelling matters!\n"
+    "\n"
+    "Categories:\n"
+    " 1 - Sport\n"
+    " 2 - Science\n"
+    " 3 - Geography\n"
+    " 4 - History\n"
+)
 
 main()
