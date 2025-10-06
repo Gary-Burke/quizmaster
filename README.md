@@ -68,6 +68,9 @@ I've used [Lucidchart](https://www.lucidchart.com/pages/examples/flowchart-maker
 |  | The program makes provision for answers to be written in both words or numbers, when applicable, e.g. "Two" or "2". In some cases typos and spelling mistakes are accounted for but this is not extensive. | ![screenshot](documentation/features/05-answers.png) |
 | Game Over Message | The program informs the player when the quiz has been completed with a customized message, which also provides feedback on how many questions the player got correct. This adds a competitive edge to the game. | ![screenshot](documentation/features/06-game-over.png) |
 
+> [!NOTE]  
+> For all data validation features, please refer to the defensive testing in the [TESTING.md](TESTING.md) file.
+
 ### Future Features
 
 - **Spelling and typos**: As this game relies on user input, it would be beneficial to add an extensie list of rules or exceptions, to catch spelling mistakes, typos or alternative spellings from the user and account for them.
