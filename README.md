@@ -9,9 +9,13 @@ Developer: Gary Burke ([Gary-Burke](https://www.github.com/Gary-Burke))
 
 ## Introduction
 
-Quizmaster is a fun and inter-active general knowledge game to be played by individuals.
-The main goal of the app, is to test a player's knowledge in a certain field or category and at the same time, expand their knowledge in that specific field.
-Since this is a Command Line interface, I opted for an app where graphics and visual ques are not needed. Playing and learning at the same time makes quiz games fun and exciting, that is why I chose to develop Quizmaster.
+Introducing Quizmaster – The Ultimate Knowledge Challenge
+
+Quizmaster is an engaging and intellectually stimulating general knowledge game designed for individuals who love to test their minds and learn something new with every play. The app’s primary goal is to challenge players across a variety of categories while helping them expand their understanding in each field.
+
+Built with a clean and efficient command-line interface, Quizmaster delivers a seamless, distraction-free experience where the focus remains on what truly matters — knowledge and fun. Whether you’re a trivia enthusiast or simply looking to sharpen your mind, Quizmaster offers an exciting blend of learning and entertainment that keeps players coming back for more.
+
+Put your knowledge to the test with Quizmaster.
 
 ![quizmaster amiresponsive](documentation/readme/amiresponsive.png)
 
@@ -333,7 +337,7 @@ There are no remaining major differences between the local version when compared
 | [Love Sandwiches](https://codeinstitute.net) | Code Institute walkthrough project inspiration |
 | [Python Tutor](https://pythontutor.com) | Additional Python help |
 | [StackOverflow](https://stackoverflow.com/a/18449421/30846754) | Accessing a list of lists |
-| [ChatGPT](https://chatgpt.com) | Help with code logic and explanations |
+| [ChatGPT](https://chatgpt.com) | Help with code logic and explanations. Used to rewrite the introduction for the README |
 | [Towards Data Science](https://towardsdatascience.com/20-newbie-mistakes-that-even-skilled-python-programmers-make-6879048731a4/) | 20 Newbie Mistakes that Even Skilled Python Programmers Make |
 
 ### Media
