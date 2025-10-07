@@ -109,7 +109,7 @@ def game_over(player, category, result, game):
     print(
         f" Well Done {player}!\n"
         f" You have completed the category of {category.capitalize()}.\n"
-        f" You managed to get {result}/{len(game)} answers correct."
+        f" You managed to get {result}/{len(game)} answers correct.\n"
     )
 
 
@@ -123,6 +123,28 @@ def validate_empty_input(prompt):
         if data:
             return data
         print(" You can't submit an empty response. Please try again.")
+
+
+def new_game():
+    """
+    When game is over, this function will prompt
+    the user into playing another game.
+    """
+    answer = validate_empty_input(
+        " Would you like to play again? (y/n)\n"
+    ).lower()
+    if answer == "y" or answer == "yes":
+        print(
+            "\n"
+            " Categories:\n"
+            "  1 - Sport\n"
+            "  2 - Science\n"
+            "  3 - Geography\n"
+            "  4 - History\n"
+        )
+        return True
+    else:
+        return False
 
 
 def main():
