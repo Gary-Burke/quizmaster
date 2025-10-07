@@ -101,94 +101,63 @@ I've used [Lucidchart](https://www.lucidchart.com/pages/examples/flowchart-maker
 
 #### Flowchart
 
-To follow best practice, a flowchart was created for the app's logic, and mapped out using a free version of [Lucidchart](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning) and/or [Draw.io](https://www.draw.io). The flowchart below represents the main process of this Python program. It shows the entire cycle of the application.
+To follow best practice, a flowchart was created for the app's logic, and mapped out using a free version of [Lucidchart](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning). The flowchart below represents the main process of this Python program. It shows the entire cycle of the application.
 
-![screenshot](documentation/flowchart.png)
+![screenshot](documentation/readme/flowchart.png)
 
-⚠️ RECOMMENDED ⚠️
+I have used and asked ChatGPT to generate a Markdown syntax Mermaid flowchart using a screenshot of my existing flowchart:
 
-Looking for an interactive version of your flowchart? Consider using a [`Mermaid flowchart`](https://mermaid.live). To simplify the process, you can ask ChatGPT (or similar) the following prompt:
-
-> ChatGPT Prompt:  
-> "Generate a Markdown syntax Mermaid flowchart using a screenshot of my existing flowchart"  
-> [paste-your-flowchart-screenshot-into-ChatGPT]
-
-The "Love Sandwiches" sample flowchart in Markdown syntax using Mermaid can be seen below as an example.
-
-**NOTE**: A Markdown Preview tool doesn't show the interactive flowchart, you must first commit/push the code to your GitHub repository in order to see it live in action.
 
 ```mermaid
 flowchart TD
-    A[Start] --> B[Get Sales Data]
-    B --> C{Is Data Valid?}
-    C -->|Yes| D[Convert Data to Integers]
-    C -->|No| B
-    D --> E[Update Sales Worksheet]
-    E --> F[Calculate Surplus Data]
-    F --> G[Update Surplus Worksheet]
-    G --> H[Get Last 5 Sales Entries]
-    H --> I[Calculate Stock Data]
-    I --> J[Update Stock Worksheet]
-    J --> K[End]
+    A([Start]) --> B[User selects category]
+    B --> C{Is the input valid?}
+    C -- No --> D[Print error message and allow user to try again]
+    D --> B
+    C -- Yes --> E[User adds his name for the game]
+    E --> F{Is the input valid?}
+    F -- No --> G[Print error message and allow user to try again]
+    G --> E
+    F -- Yes --> H[Get data from selected category worksheet]
+    H --> I[Cycle through data to display question and request answer]
+    I --> J{Is the input valid?}
+    J -- No --> K[Print error message and allow user to try again]
+    K --> I
+    J -- Yes --> L{Is the answer correct?}
+    L -- Yes --> M[Print message to confirm answer is correct]
+    L -- No --> N[Print message to confirm answer is wrong and display correct answer]
+    M --> O{Cycled through all questions?}
+    N --> O
+    O -- No --> I
+    O -- Yes --> P[End Program]
 ```
 
-Source: [Mermaid Flowchart for Love Sandwiches](https://mermaid.live/edit#pako:eNpdkctugzAQRX_F8jpZdsOiVXkkIa26SR9qgcUIJoAwNjLjVlXIv5cMJErjlWfu8b0z8kHmpkDpyb0yP3kFlsRrmGoxnsdkR2OdieXyXvjJGknsQGEvQiDIJsZnMTjEU1e8g6qLh-MkBidx-MR-EGESGP2NoztjZESsCUu0fXbNvphB-FMjZOcoeesKIJyTP4xt-gqR5lcRQ6skAJU7xZyznXL_ZlwxtL44zcSt15qxDe_5DD2Juzk00mRrPA-6YSy-jiSTN9eBMSPbSyDrt3Fbhp6SSBeZXMgWbQt1MX7E4aSnkipsMZXeeC3ANqlM9XHkwJHZ_epcemQdLqTjjLCG0kJ7bnagv4y5lNa4spLeHlSPxz-Rd5za)
-
-⚠️ --- END --- ⚠️
-
-#### Classes & Functions
-
-⚠️ INSTRUCTIONS ⚠️
-
-Use this space to explain your Python classes (if applicable) and functions. Examples below for inspiration, although Love Sandwiches doesn't use this example `Person` class/object.
-
-⚠️ --- END --- ⚠️
-
-The program uses classes as a blueprint for the project's object-oriented programming (OOP). This allows for the object to be reusable and callable where necessary.
-
-```python
-class Person:
-    """ Insert docstring comments here """
-    def __init__(self, name, age, health, inventory):
-        self.name = name
-        self.age = age
-        self.health = health
-        self.inventory = inventory
-```
+#### Functions
 
 The primary functions used on this application are:
 
-- `get_sales_data()`
-    - Get sales figures input from the user.
-- `validate_data()`
-    - Converts all string values into integers.
-- `update_worksheet()`
-    - Update the relevant worksheet with the data provided.
-- `calculate_surplus_data()`
-    - Compare sales with stock and calculate the surplus for each item type.
-- `get_last_5_entries_sales()`
-    - Collects columns of data from sales worksheet.
-- `calculate_stock_data()`
-    -  Calculate the average stock for each item type, adding 10%.
+- `choose_category()`
+    - Ask user to choose a category from a list and validates the data input.
+- `get_player_name()`
+    - Ask user to supply their name and validates the data input.
+- `load_game()`
+    - Use the selected category from the user to load the correct worksheet.
+- `start_game()`
+    - Loops through questions and answers while validating each input.
+- `game_over()`
+    - Print a game over message to the user.
+- `validate_empty_input()`
+    -  Validates user input and ensures they don't submit an empty field
 - `main()`
     - Run all program functions.
 
 #### Imports
 
-⚠️ INSTRUCTIONS ⚠️
-
-Use this space to explain your Python imports and packages, with some common examples found below.
-
-⚠️ --- END --- ⚠️
-
 I've used the following Python packages and external imports.
 
 - `gspread`: used with the Google Sheets API
 - `google.oauth2.service_account`: used for the Google Sheets API credentials
-- `time`: used for adding time delays
-- `os`: used for adding a `clear()` function
-- `colorama`: used for including color in the terminal
-- `random`: used to get a random choice from a list
+- `shuffle from random`: used to randomize the order of questions in the list
 
 ## Agile Development Process
 
