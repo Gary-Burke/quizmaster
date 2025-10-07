@@ -281,19 +281,9 @@ The Python terminal window should now be connected and deployed to Heroku!
 
 This application uses [Google Sheets](https://docs.google.com/spreadsheets) to handle a "makeshift" database on the live site.
 
-⚠️ INSTRUCTIONS ⚠️
+To run your own version of this application, you will need to create your own Google Sheet with four sheets named `sport`, `science`, `geography` and `history`. Each workseet consists out of a question in column one, followed by the correct answer in the second column and then a third column with an alternative format answer.
 
-The sample Sheet below follows along with the CI Love Sandwiches lessons, so make sure to refactor to your own project requirements.
-
-⚠️ --- END ---⚠️
-
-To run your own version of this application, you will need to create your own Google Sheet with three sheets named `sales`, `surplus`, and `stock` in the following format:
-
-| cheese ham | tom moz | chicken salad | egg salad | hummus veg | ham egg |
-| --- | --- | --- | --- | --- | --- |
-| sample data | sample data | sample data | sample data | sample data | sample data |
-| sample data | sample data | sample data | sample data | sample data | sample data |
-| sample data | sample data | sample data | sample data | sample data | sample data |
+ ![screenshot](documentation/readme/google-sheets.png)
 
 A credentials file in `.JSON` format from the Google Cloud Platform is also mandatory:
 
