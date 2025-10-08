@@ -50,18 +50,25 @@ def get_player_name():
     return player_name
 
 
-def load_game(player, category):
+def load_game(player, category, first_round):
     """
     Use the selected category from the user to load the correct worksheet.
     The worksheet contains the question and the answer in a list of lists.
-    Randomize the order with shuffle method and return the list of lists
+    Randomize the order with shuffle method and return the list of lists.
+    Two different messages based on whether it is the first game or a restart.
     """
     game = SHEET.worksheet(category).get_all_values()
     total = len(game)
-    print(f"\n Welcome {player}!\n"
-          f" You have chosen the category: {category.capitalize()}\n"
-          f" We have a total of {total} questions for you. Good luck!\n"
-          )
+    if first_round:
+        print(f"\n Welcome {player}!\n"
+              f" You have chosen the category: {category.capitalize()}\n"
+              f" We have a total of {total} questions for you. Good luck!\n"
+              )
+    else:
+        print(f"\n Okay {player}, get ready...\n"
+              f" You have chosen the category: {category.capitalize()}\n"
+              f" We have a total of {total} questions for you. Good luck!\n"
+              )
     shuffle(game)
     return game
 
@@ -125,7 +132,7 @@ def validate_empty_input(prompt):
         print(" You can't submit an empty response. Please try again.")
 
 
-def new_game():
+def new_game(player):
     """
     When game is over, this function will prompt
     the user into playing another game.
@@ -135,7 +142,8 @@ def new_game():
     ).lower()
     if answer == "y" or answer == "yes":
         print(
-            "\n Categories:\n"
+            f"\n A Wise Decision {player}.\n"
+            " Categories:\n"
             "  1 - Sport\n"
             "  2 - Science\n"
             "  3 - Geography\n"
@@ -149,12 +157,14 @@ def new_game():
 def main():
     player = get_player_name()
     restart_game = True
+    first_round = True
     while restart_game:
         category = choose_category()
-        game = load_game(player, category)
+        game = load_game(player, category, first_round)
         result = start_game(game)
         game_over(player, category, result, game)
-        restart_game = new_game()
+        restart_game = new_game(player)
+        first_round = False
 
 
 print(
