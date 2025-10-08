@@ -23,7 +23,7 @@ def choose_category():
     """
     while True:
         try:
-            category = int(input(" Choose your category:\n"))
+            category = int(input(" \n Choose your category:\n"))
             if category < 1 or category > 4:
                 raise ValueError
         except ValueError:
@@ -45,7 +45,7 @@ def get_player_name():
     Ask user to supply their name so that it can be
     used in a personalized message when the game is over.
     """
-    print("\n First and most important question:")
+    print(" First and most important question:")
     player_name = validate_empty_input(" What is your name?\n")
     return player_name
 
@@ -135,12 +135,11 @@ def new_game():
     ).lower()
     if answer == "y" or answer == "yes":
         print(
-            "\n"
-            " Categories:\n"
+            "\n Categories:\n"
             "  1 - Sport\n"
             "  2 - Science\n"
             "  3 - Geography\n"
-            "  4 - History\n"
+            "  4 - History"
         )
         return True
     else:
