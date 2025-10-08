@@ -31,10 +31,10 @@ Put your knowledge to the test with Quizmaster.
 | As a player | it would be exciting if I could choose different categories | with which to play the quiz game. |
 | As a player | it would be good to know how many questions there are in the selected quiz | so as to know the length of the game. |
 | As a player | my input needs to be validated and a clear error message needs to be displayed when my input is invalid |  so as to ensure a proper and smooth gaming experience. |
-| As a player |  I want to get feedback on my answers, whether they are right or wrong | and if wrong, I want to know what the actual correct answer is. |
-| As a player |  I would like to be able to submit my name in the game | to get a personalized feedback when the game is over. |
-| As a player |  it would be a good experience to see how many answers I got correct | so that I can challenge myself again next time. |
-| As a player |   I would like to be able to answer a question with a number or with text, e.g. "2" or "Two" | this would add to the user experience. |
+| As a player | I want to get feedback on my answers, whether they are right or wrong | and if wrong, I want to know what the actual correct answer is. |
+| As a player | I would like to be able to submit my name in the game | to get a personalized feedback when the game is over. |
+| As a player | it would be a good experience to see how many answers I got correct | so that I can challenge myself again next time. |
+| As a player | I would like to be able to answer a question with a number or with text, e.g. "2" or "Two" | this would add to the user experience. |
 
 
 ### Wireframes
@@ -48,15 +48,18 @@ I've used [Lucidchart](https://www.lucidchart.com/pages/examples/flowchart-maker
 
 **User Flow**
 1. User opens the app → Sees the rules and categories listed.
-2. User selects a category → Inputs number to chooses category.
+2. Program asks user for his name → User inputs name into the input field
+3. Program asks user to choose a category → User inputs number to chooses category.
 3. Program gets the corresponding worksheet from Google Sheets for the quiz.
-3. Program asks user for his name → User inputs name into the input field
 4. User sees start game message → The user name, selected category and total number of questions are displayed
 5. User sees first question → User supplies answer
 6. User gets feedback → Asnwer was correct or incorrect
 7. User gets feedback → If answer was incorrect, then correct answer is displayed
 8. User sees next question → Game repeats until all questions have been cycled through
 9. App informs user that the game is over and how many answers he got correct.
+10. Program asks user if he wants to play again →    
+→ No → Program ends game and clears terminal  
+→ Yes → Program starts new game
 
 
 ### Features
@@ -111,14 +114,13 @@ To follow best practice, a flowchart was created for the app's logic, and mapped
 
 I have used and asked ChatGPT to generate a Markdown syntax Mermaid flowchart using a screenshot of my existing flowchart:
 
-
 ```mermaid
 flowchart TD
-    A([Start]) --> B[User selects category]
+    A([Start]) --> B[User adds his name for the game]
     B --> C{Is the input valid?}
     C -- No --> D[Print error message and allow user to try again]
     D --> B
-    C -- Yes --> E[User adds his name for the game]
+    C -- Yes --> E[User selects category]
     E --> F{Is the input valid?}
     F -- No --> G[Print error message and allow user to try again]
     G --> E
@@ -133,7 +135,9 @@ flowchart TD
     M --> O{Cycled through all questions?}
     N --> O
     O -- No --> I
-    O -- Yes --> P[End Program]
+    O -- Yes --> P{Ask user to play again}
+    P -- Yes --> E
+    P -- No --> Q([End Program])
 ```
 
 #### Functions
