@@ -42,7 +42,7 @@ Put your knowledge to the test with Quizmaster.
 To follow best practice, a flowchart was created to showcase the progression of the Python app.
 I've used [Lucidchart](https://www.lucidchart.com/pages/examples/flowchart-maker) to design my app flowchart.
 
-![screenshot](documentation/readme/flowchart.png)
+**[Click to see Flowchart](#flowchart)**
 
 ### Structure
 
@@ -112,7 +112,7 @@ To follow best practice, a flowchart was created for the app's logic, and mapped
 
 ![screenshot](documentation/readme/flowchart.png)
 
-I have used and asked ChatGPT to generate a Markdown syntax Mermaid flowchart using a screenshot of my existing flowchart:
+Mermaid flowchart:
 
 ```mermaid
 flowchart TD
@@ -343,6 +343,7 @@ There are no remaining major differences between the local version when compared
 | [StackOverflow](https://stackoverflow.com/a/18449421/30846754) | Accessing a list of lists |
 | [StackOverflow](https://stackoverflow.com/a/50921841) | Clear screen in Python |
 | [ChatGPT](https://chatgpt.com) | Help with code logic and explanations. Used to rewrite the introduction for the README |
+| [ChatGPT](https://chatgpt.com) | Used to generate a Mermaid Flowchart from my existing flowchart |
 | [Towards Data Science](https://towardsdatascience.com/20-newbie-mistakes-that-even-skilled-python-programmers-make-6879048731a4/) | 20 Newbie Mistakes that Even Skilled Python Programmers Make |
 
 ### Media
