@@ -11,7 +11,7 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| root | [run.py](https://github.com/Gary-Burke/quizmaster/blob/main/run.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Gary-Burke/quizmaster/main/run.py) | ![screenshot](documentation/validation/py--run.png) | ⚠️ Notes (if applicable) |
+| root | [run.py](https://github.com/Gary-Burke/quizmaster/blob/main/run.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Gary-Burke/quizmaster/main/run.py) | ![screenshot](documentation/validation/py--run.png) |  |
 
 ## Defensive Programming
 
@@ -28,6 +28,9 @@ Defensive programming was manually tested with the below user acceptance testing
 | Data Validation Name | Feature is expected to catch any empty input. | Entered an empty input. | Program catches invalid input and informs user. | ![screenshot](documentation/defensive/name-empty.png) |
 | Input Answer | Feature is expected to let user add his answer. | Entered a valid answer e.g. string. | Program moves to next step. | ![screenshot](documentation/defensive/answer-valid.png) |
 | Data Validation Answer | Feature is expected to catch any empty input. | Entered an empty input. | Program catches invalid input and informs user. | ![screenshot](documentation/defensive/answer-empty.png) |
+| New Game | Feature is expected to let user choose to play another game. | Entered a valid positive response e.g. "y". | Program starts new game. | ![screenshot](documentation/defensive/new-game-yes.png) |
+| New Game | Feature is expected to let user choose to play another game. | Entered a valid negative response e.g. "n". | Program clears terminal and ends itself. | ![screenshot](documentation/defensive/new-game-no.png) |
+| Data Validation New Game | Feature is expected to catch any empty input. | Entered an empty input. | Program catches invalid input and informs user. | ![screenshot](documentation/defensive/new-game-empty.png) |
 
 > [!NOTE]  
 > As a player may use a pseudonym as a name and as answers might consist out of numbers, both of these inputs allow numbers as valid data.
@@ -41,10 +44,11 @@ Defensive programming was manually tested with the below user acceptance testing
 | As a player | it would be exciting if I could choose different categories | with which to play the quiz game. | ![screenshot](documentation/features/01-category.png) |
 | As a player | it would be good to know how many questions there are in the selected quiz | so as to know the length of the game. | ![screenshot](documentation/features/03-welcome.png) |
 | As a player | my input needs to be validated and a clear error message needs to be displayed when my input is invalid |  so as to ensure a proper and smooth gaming experience. | ![screenshot](documentation/defensive/category-string.png) |
-| As a player |  I want to get feedback on my answers, whether they are right or wrong | and if wrong, I want to know what the actual correct answer is. | ![screenshot](documentation/features/04-quiz-feedback.png) |
-| As a player |  I would like to be able to submit my name in the game | to get a personalized feedback when the game is over. | ![screenshot](documentation/features/06-game-over.png) |
-| As a player |  it would be a good experience to see how many answers I got correct | so that I can challenge myself again next time. | ![screenshot](documentation/features/06-game-over.png) |
-| As a player |   I would like to be able to answer a question with a number or with text, e.g. "2" or "Two" | this would add to the user experience. | ![screenshot](documentation/features/05-answers.png) |
+| As a player | I want to get feedback on my answers, whether they are right or wrong | and if wrong, I want to know what the actual correct answer is. | ![screenshot](documentation/features/04-quiz-feedback.png) |
+| As a player | I would like to be able to submit my name in the game | to get a personalized feedback when the game is over. | ![screenshot](documentation/features/06-game-over.png) |
+| As a player | it would be a good experience to see how many answers I got correct | so that I can challenge myself again next time. | ![screenshot](documentation/features/06-game-over.png) |
+| As a player | I would like to be able to answer a question with a number or with text, e.g. "2" or "Two" | this would add to the user experience. | ![screenshot](documentation/features/05-answers.png) |
+| As a player | I would like to be able to start another round of the quiz at the end of the game | this would add to the user experience and create a natural flow of events. | ![screenshot](documentation/features/07-new-game.png) |
 
 ## Bugs
 
