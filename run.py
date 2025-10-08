@@ -13,6 +13,23 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open("Quizmaster")
 
+CATEGORIES = {
+    1: "sport",
+    2: "science",
+    3: "geography",
+    4: "history",
+}
+
+
+def print_categories():
+    """
+    Prints the heading 'Categories:' and lists all the items from
+    the dictionary CATEGORIES.
+    """
+    print(" Categories:")
+    for num, name in CATEGORIES.items():
+        print(f"  {num} - {name.capitalize()}")
+
 
 def choose_category():
     """
@@ -45,7 +62,7 @@ def get_player_name():
     Ask user to supply their name so that it can be
     used in a personalized message when the game is over.
     """
-    print(" First and most important question:")
+    print("\n First and most important question:")
     player_name = validate_empty_input(" What is your name?\n")
     return player_name
 
@@ -141,14 +158,8 @@ def new_game(player):
         " Would you like to play again? (y/n)\n"
     ).lower()
     if answer == "y" or answer == "yes":
-        print(
-            f"\n A Wise Decision {player}.\n"
-            " Categories:\n"
-            "  1 - Sport\n"
-            "  2 - Science\n"
-            "  3 - Geography\n"
-            "  4 - History"
-        )
+        print(f"\n A Wise Decision {player}.\n")
+        print_categories()
         return True
     else:
         print("\033c")
@@ -175,12 +186,6 @@ print(
     "  - Press Enter to submit your responses\n"
     "  - Choose a category by typing the corresponding number\n"
     "  - Spelling matters!\n"
-    "\n"
-    " Categories:\n"
-    "  1 - Sport\n"
-    "  2 - Science\n"
-    "  3 - Geography\n"
-    "  4 - History\n"
 )
-
+print_categories()
 main()
