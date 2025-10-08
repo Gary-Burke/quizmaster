@@ -151,6 +151,7 @@ def new_game(player):
         )
         return True
     else:
+        print("\033c")
         return False
 
 
