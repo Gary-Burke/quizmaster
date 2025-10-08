@@ -146,6 +146,8 @@ flowchart TD
 
 The primary functions used on this application are:
 
+- `print_categories()`
+    -  Prints the heading 'Categories:' and lists all of the categories.
 - `choose_category()`
     - Ask user to choose a category from a list and validates the data input.
 - `get_player_name()`
@@ -153,9 +155,9 @@ The primary functions used on this application are:
 - `load_game()`
     - Use the selected category from the user to load the correct worksheet.
 - `start_game()`
-    - Loops through questions and answers while validating each input.
+    - Loops through questions one by one. Gives feedback on the answers from the user. Validates each input.
 - `game_over()`
-    - Print a game over message to the user.
+    - Print a game over message to the user, which includes the score count.
 - `validate_empty_input()`
     -  Validates user input and ensures they don't submit an empty field
 - `new_game()`
