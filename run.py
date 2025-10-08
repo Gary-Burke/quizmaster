@@ -40,21 +40,10 @@ def choose_category():
     """
     while True:
         try:
-            category = int(input(" \n Choose your category:\n"))
-            if category < 1 or category > 4:
-                raise ValueError
-        except ValueError:
+            choice = int(input("\n Choose your category (number):\n"))
+            return CATEGORIES[choice]
+        except (ValueError, KeyError):
             print(" Invalid input. Please enter a number between 1-4")
-        else:
-            match category:
-                case 1:
-                    return "sport"
-                case 2:
-                    return "science"
-                case 3:
-                    return "geography"
-                case 4:
-                    return "history"
 
 
 def get_player_name():
