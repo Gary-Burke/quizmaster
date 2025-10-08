@@ -337,6 +337,7 @@ There are no remaining major differences between the local version when compared
 | [Love Sandwiches](https://codeinstitute.net) | Code Institute walkthrough project inspiration |
 | [Python Tutor](https://pythontutor.com) | Additional Python help |
 | [StackOverflow](https://stackoverflow.com/a/18449421/30846754) | Accessing a list of lists |
+| [StackOverflow](https://stackoverflow.com/a/50921841) | Clear screen in Python |
 | [ChatGPT](https://chatgpt.com) | Help with code logic and explanations. Used to rewrite the introduction for the README |
 | [Towards Data Science](https://towardsdatascience.com/20-newbie-mistakes-that-even-skilled-python-programmers-make-6879048731a4/) | 20 Newbie Mistakes that Even Skilled Python Programmers Make |
 
