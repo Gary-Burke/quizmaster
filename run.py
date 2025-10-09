@@ -155,7 +155,9 @@ def new_game(player):
                 print("\033c")
                 return False
             else:
-                raise ValueError("Type y or n to confirm. Please try again\n")
+                raise ValueError(
+                    "\n Invalid answer. Type y or n. Please try again."
+                )
 
         except ValueError as e:
             print(e)
