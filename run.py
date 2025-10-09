@@ -143,16 +143,22 @@ def new_game(player):
     When game is over, this function will prompt
     the user into playing another game.
     """
-    answer = validate_empty_input(
-        " Would you like to play again? (y/n)\n"
-    ).lower()
-    if answer == "y" or answer == "yes":
-        print(f"\n A Wise Decision {player}.\n")
-        print_categories()
-        return True
-    else:
-        print("\033c")
-        return False
+    while True:
+        try:
+            answer = validate_empty_input(
+                " Would you like to play again? (y/n)\n").lower()
+            if answer in ("y", "ye", "yes", "y."):
+                print(f"\n A Wise Decision {player}.\n")
+                print_categories()
+                return True
+            elif answer in ("n", "no", "n."):
+                print("\033c")
+                return False
+            else:
+                raise ValueError("Type y or n to confirm. Please try again\n")
+
+        except ValueError as e:
+            print(e)
 
 
 def main():
