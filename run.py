@@ -13,6 +13,7 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open("Quizmaster")
 
+# These categories must correspond with the Google Sheets
 CATEGORIES = {
     1: "sport",
     2: "science",
@@ -184,5 +185,7 @@ print(
     "  - Choose a category by typing the corresponding number\n"
     "  - Spelling matters!\n"
 )
+
 print_categories()
+
 main()
