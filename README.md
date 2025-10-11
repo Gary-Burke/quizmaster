@@ -17,7 +17,9 @@ Built with a clean and efficient command-line interface, Quizmaster delivers a s
 
 Put your knowledge to the test with Quizmaster.
 
-![quizmaster amiresponsive](documentation/readme/amiresponsive.png)
+The live deployed application can be viewed here: [Heroku](https://quizmaster-game-dfe6a1b8c370.herokuapp.com)
+
+![quizmaster hero image](documentation/readme/hero.png)
 
 
 ## UX
