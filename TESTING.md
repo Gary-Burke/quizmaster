@@ -76,6 +76,7 @@ Any remaining open issues can be tracked [here](https://www.github.com/Gary-Burk
 | --- | --- |
 | The Python terminal doesn't work well with Safari, and sometimes users cannot type in the application. | n/a |
 | If a user types `CTRL`+`C` in the terminal on the live site, they can manually stop the application and receive and error. | ![screenshot](documentation/testing/issues/ctrl-c.png) |
+| The `colorama` terminal colors are fainter on Heroku when compared to the IDE locally. | ![screenshot](documentation/testing/issues/colorama.png) |
 
 > [!IMPORTANT]  
 > There are no remaining bugs that I am aware of, though, even after thorough testing, I cannot rule out the possibility.
