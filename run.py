@@ -1,6 +1,9 @@
 import gspread
 from random import shuffle
 from google.oauth2.service_account import Credentials
+import colorama
+from colorama import Fore
+colorama.init(autoreset=True)
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -27,7 +30,7 @@ def print_categories():
     Prints the heading 'Categories:' and lists all the items from
     the dictionary CATEGORIES.
     """
-    print(" Categories:")
+    print(f"{Fore.CYAN} Categories:")
     for num, name in CATEGORIES.items():
         print(f"  {num} - {name.capitalize()}")
 
@@ -41,7 +44,9 @@ def choose_category():
     """
     while True:
         try:
-            choice = int(input("\n Choose your category (number):\n"))
+            choice = int(input(
+                f"\n{Fore.CYAN} Choose your category (1-4):{Fore.RESET}\n "
+            ))
             return CATEGORIES[choice]
         except (ValueError, KeyError):
             print(" Invalid input. Please enter a number between 1-4")
@@ -52,8 +57,8 @@ def get_player_name():
     Ask user to supply their name so that it can be
     used in a personalized message when the game is over.
     """
-    print("\n First and most important question:")
-    player_name = validate_empty_input(" What is your name?\n")
+    print(f"\n{Fore.CYAN} First and most important question:")
+    player_name = validate_empty_input(" What is your name?\n ")
     return player_name
 
 
@@ -67,12 +72,14 @@ def load_game(player, category, first_round):
     game = SHEET.worksheet(category).get_all_values()
     total = len(game)
     if first_round:
-        print(f"\n Welcome {player}!\n"
-              f" You have chosen the category: {category.capitalize()}\n"
-              f" We have a total of {total} questions for you. Good luck!\n"
+        print(f"\n{Fore.MAGENTA} Welcome {player}!{Fore.RESET}\n"
+              f" You have chosen the category: "
+              f"{Fore.MAGENTA}{category.capitalize()}{Fore.RESET}\n"
+              f" We have a total of {Fore.MAGENTA}{total} questions "
+              f"{Fore.RESET}for you. Good luck!\n"
               )
     else:
-        print(f"\n Okay {player}, get ready...\n"
+        print(f"\n{Fore.MAGENTA} Okay {player}, get ready...{Fore.RESET}\n"
               f" You have chosen the category: {category.capitalize()}\n"
               f" We have a total of {total} questions for you. Good luck!\n"
               )
@@ -93,22 +100,26 @@ def start_game(game):
 
     while question_counter < total_questions:
         print(
-            f" Question {question_counter + 1}:"
-            f" {game[question_counter][0]}"
+            f"{Fore.CYAN} Question {question_counter + 1}:"
+            f"{Fore.RESET} {game[question_counter][0]}"
         )
-        user_answer = validate_empty_input(" Your answer:\n")
+        user_answer = validate_empty_input(" Your answer:\n ")
         correct_answer = game[question_counter][1].strip()
         alt_correct_answer = game[question_counter][2].strip()
         if (
             user_answer.lower() == correct_answer.lower()
             or user_answer.lower() == alt_correct_answer.lower()
         ):
-            print(f" {correct_answer} is correct!\n")
+            print(
+                f"{Fore.YELLOW} {correct_answer} {Fore.RESET}is the"
+                f"{Fore.GREEN} CORRECT {Fore.RESET}answer!\n"
+            )
             correct_answers += 1
         else:
             print(
-                f" {user_answer} is the wrong answer!\n"
-                f" The correct answer is: {correct_answer}\n"
+                f"{Fore.YELLOW} {user_answer}{Fore.RESET} is the"
+                f"{Fore.RED} WRONG {Fore.RESET}answer!\n"
+                f" The correct answer is: {Fore.GREEN}{correct_answer}\n"
             )
         question_counter += 1
 
@@ -121,9 +132,11 @@ def game_over(player, category, result, game):
     includes the category, amount of correct answers and total questions
     """
     print(
-        f" Well Done {player}!\n"
-        f" You have completed the category of {category.capitalize()}.\n"
-        f" You managed to get {result}/{len(game)} answers correct.\n"
+        f"{Fore.MAGENTA} Well Done {player}!{Fore.RESET}\n"
+        f" You have completed the category: {Fore.MAGENTA}"
+        f"{category.capitalize()}.{Fore.RESET}\n"
+        f" You managed to get {Fore.MAGENTA}{result}/{len(game)}"
+        f" {Fore.RESET}answers correct.\n"
     )
 
 
@@ -136,7 +149,10 @@ def validate_empty_input(prompt):
         data = input(prompt).strip()
         if data:
             return data
-        print(" You can't submit an empty response. Please try again.")
+        print(
+            f"{Fore.RESET} You can't submit an empty response. "
+            "Please try again."
+        )
 
 
 def new_game(player):
@@ -147,9 +163,10 @@ def new_game(player):
     while True:
         try:
             answer = validate_empty_input(
-                " Would you like to play again? (y/n)\n").lower()
+                f" {Fore.CYAN}Would you like to play again? (y/n)"
+                f"\n{Fore.RESET} ").lower()
             if answer in ("y", "ye", "yes", "y."):
-                print(f"\n A Wise Decision {player}.\n")
+                print(f"\n {Fore.MAGENTA}A Wise Decision {player}.\n")
                 print_categories()
                 return True
             elif answer in ("n", "no", "n."):
@@ -157,7 +174,8 @@ def new_game(player):
                 return False
             else:
                 raise ValueError(
-                    "\n Invalid answer. Type y or n. Please try again."
+                    f"\n{Fore.RESET} Invalid answer. Type y or n."
+                    " Please try again."
                 )
 
         except ValueError as e:
@@ -177,11 +195,13 @@ def main():
         first_round = False
 
 
+print("\033c")
+
 print(
-    " Welcome to QUIZMASTER!\n"
-    "\n"
-    " The rules are simple:\n"
-    "  - Press Enter to submit your responses\n"
+    f"{Fore.MAGENTA} Welcome to QUIZMASTER!\n"
+    f"\n{Fore.RESET}"
+    f"{Fore.CYAN} The rules are simple:\n"
+    f"{Fore.RESET}  - Press Enter to submit your responses\n"
     "  - Choose a category by typing the corresponding number\n"
     "  - Spelling matters!\n"
 )
