@@ -195,7 +195,7 @@ def main():
         first_round = False
 
 
-print("\033c")
+print("\033c")  # Clear terminal before printing
 
 print(
     f"{Fore.MAGENTA} Welcome to QUIZMASTER!\n"

@@ -174,6 +174,7 @@ I've used the following Python packages and external imports.
 - `gspread`: used with the Google Sheets API
 - `google.oauth2.service_account`: used for the Google Sheets API credentials
 - `shuffle from random`: used to randomize the order of questions in the list
+- `colorama`: used for including color in the terminal
 
 ## Agile Development Process
 
@@ -353,6 +354,7 @@ There are no remaining major differences between the local version when compared
 | [ChatGPT](https://chatgpt.com) | Help with code logic and explanations. Used to rewrite the introduction for the README |
 | [ChatGPT](https://chatgpt.com) | Used to generate a Mermaid Flowchart from my existing flowchart |
 | [Towards Data Science](https://towardsdatascience.com/20-newbie-mistakes-that-even-skilled-python-programmers-make-6879048731a4/) | 20 Newbie Mistakes that Even Skilled Python Programmers Make |
+| [Colorama](https://www.youtube.com/watch?v=u51Zjlnui4Y) | Adding color in Python |
 
 ### Media
 
