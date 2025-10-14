@@ -78,15 +78,14 @@ def get_player_name():
             return player_name
 
 
-def load_game(player, category, first_round):
+def load_game(player, category, first_round, total):
     """
     Use the selected category from the user to load the correct worksheet.
     The worksheet contains the question and the answer in a list of lists.
     Randomize the order with shuffle method and return the list of lists.
     Two different messages based on whether it is the first game or a restart.
     """
-    game = SHEET.worksheet(category).get_all_values()
-    total = len(game)
+    game_sheet = SHEET.worksheet(category).get_all_values()
     if first_round:
         print(f"\n{Fore.MAGENTA} Welcome {player}!{Fore.RESET}\n"
               f" You have chosen the category: "
@@ -99,22 +98,30 @@ def load_game(player, category, first_round):
               f" You have chosen the category: {category.capitalize()}\n"
               f" We have a total of {total} questions for you. Good luck!\n"
               )
-    shuffle(game)
+    shuffle(game_sheet)
+
+    game = []
+
+    for i in range(total):
+        if len(game) < total:
+            game.append(game_sheet[i])
+
+    game = [game_sheet[i] for i in range(total)]
+
     return game
 
 
-def start_game(game):
+def start_game(game, total):
     """
     Loop through the list of lists returned from function load_game.
     Display one question and ask user for an answer.
     Check user answer against stored answer and provide feedback.
     Use lower method to avoid spelling or typo mistakes.
     """
-    total_questions = len(game)
     question_counter = 0
     correct_answers = 0
 
-    while question_counter < total_questions:
+    while question_counter < total:
         print(
             f"{Fore.CYAN} Question {question_counter + 1}:"
             f"{Fore.RESET} {game[question_counter][0]}"
@@ -142,7 +149,7 @@ def start_game(game):
     return correct_answers
 
 
-def game_over(player, category, result, game):
+def game_over(player, category, result, total):
     """
     Print a game over message to the user which
     includes the category, amount of correct answers and total questions
@@ -151,7 +158,7 @@ def game_over(player, category, result, game):
         f"{Fore.MAGENTA} Well Done {player}!{Fore.RESET}\n"
         f" You have completed the category: {Fore.MAGENTA}"
         f"{category.capitalize()}.{Fore.RESET}\n"
-        f" You managed to get {Fore.MAGENTA}{result}/{len(game)}"
+        f" You managed to get {Fore.MAGENTA}{result}/{total}"
         f" {Fore.RESET}answers correct.\n"
     )
 
@@ -205,14 +212,15 @@ def new_game(player):
 
 
 def main():
+    total = 10  # Amount of questions per game
     player = get_player_name()
     restart_game = True
     first_round = True
     while restart_game:
         category = choose_category()
-        game = load_game(player, category, first_round)
-        result = start_game(game)
-        game_over(player, category, result, game)
+        game = load_game(player, category, first_round, total)
+        result = start_game(game, total)
+        game_over(player, category, result, total)
         restart_game = new_game(player)
         first_round = False
 
