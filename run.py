@@ -59,7 +59,7 @@ def get_player_name():
     used in a personalized message when the game is over.
     """
     print(f"\n{Fore.CYAN} First and most important question:")
-    player_name = validate_input(" What is your name?\n ")
+    player_name = validate_input(" What is your username?\n ")
     return player_name
 
 
@@ -170,7 +170,7 @@ def new_game(player):
                 f" {Fore.CYAN}Would you like to play again? (y/n)"
                 f"\n{Fore.RESET} ").lower()
             if answer in ("y", "ye", "yes", "y."):
-                print(f"\n {Fore.MAGENTA}A Wise Decision {player}.\n")
+                print(f"\n {Fore.MAGENTA}Correct answer {player}!\n")
                 print_categories()
                 return True
             elif answer in ("n", "no", "n."):
@@ -178,8 +178,8 @@ def new_game(player):
                 return False
             else:
                 raise ValueError(
-                    f"\n{Fore.RESET} Invalid answer. Type y or n."
-                    " Please try again."
+                    f"\n{Fore.RED} Invalid input! {Fore.RESET}"
+                    "Type 'y' or 'n'. Please try again."
                 )
 
         except ValueError as e:
