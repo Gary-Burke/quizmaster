@@ -240,17 +240,19 @@ def main():
         first_round = False
 
 
-clear()  # Clear terminal before printing
+# Add main entry point to script
+if __name__ == "__main__":
+    clear()
 
-print(
-    f"{Fore.MAGENTA} Welcome to QUIZMASTER!\n"
-    f"\n{Fore.RESET}"
-    f"{Fore.CYAN} The rules are simple:\n"
-    f"{Fore.RESET}  - Press Enter to submit your responses\n"
-    "  - Choose a category by typing the corresponding number\n"
-    "  - Spelling matters!\n"
-)
+    print(
+        f"{Fore.MAGENTA} Welcome to QUIZMASTER!\n"
+        f"\n{Fore.RESET}"
+        f"{Fore.CYAN} The rules are simple:\n"
+        f"{Fore.RESET}  - Press Enter to submit your responses\n"
+        "  - Choose a category by typing the corresponding number\n"
+        "  - Spelling matters!\n"
+    )
 
-print_categories()
+    print_categories()
 
-main()
+    main()
