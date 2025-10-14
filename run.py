@@ -1,5 +1,6 @@
 import gspread
 from random import shuffle
+import re
 from google.oauth2.service_account import Credentials
 import colorama
 from colorama import Fore
@@ -58,7 +59,7 @@ def get_player_name():
     used in a personalized message when the game is over.
     """
     print(f"\n{Fore.CYAN} First and most important question:")
-    player_name = validate_empty_input(" What is your name?\n ")
+    player_name = validate_input(" What is your name?\n ")
     return player_name
 
 
@@ -103,7 +104,7 @@ def start_game(game):
             f"{Fore.CYAN} Question {question_counter + 1}:"
             f"{Fore.RESET} {game[question_counter][0]}"
         )
-        user_answer = validate_empty_input(" Your answer:\n ")
+        user_answer = validate_input(" Your answer:\n ")
         correct_answer = game[question_counter][1].strip()
         alt_correct_answer = game[question_counter][2].strip()
         if (
@@ -140,17 +141,20 @@ def game_over(player, category, result, game):
     )
 
 
-# Solution for empty input from user from ChatGPT
-def validate_empty_input(prompt):
+def validate_input(prompt):
     """
-    Validates user input and ensures they don't submit an empty field
+    Validates user input and ensures they don't submit an empty field.
+    Using the re library, we limit the input here to contain only
+    letters, numbers, spaces, '_' and '-'
     """
+    allowed_char = re.compile(r"^[A-Za-z0-9_ -]+$")
     while True:
-        data = input(prompt).strip()
-        if data:
-            return data
+        user_input = input(prompt).strip()
+        if (allowed_char.fullmatch(user_input)) and (len(user_input) > 0):
+            return user_input
         print(
-            f"{Fore.RESET} You can't submit an empty response. "
+            f"{Fore.RED} Invalid Input! {Fore.RESET}Input can't be empty and "
+            "may only contain letters, numbers, spaces, '_' and '-'. "
             "Please try again."
         )
 
@@ -162,7 +166,7 @@ def new_game(player):
     """
     while True:
         try:
-            answer = validate_empty_input(
+            answer = validate_input(
                 f" {Fore.CYAN}Would you like to play again? (y/n)"
                 f"\n{Fore.RESET} ").lower()
             if answer in ("y", "ye", "yes", "y."):
