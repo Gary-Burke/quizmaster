@@ -74,6 +74,7 @@ Any remaining open issues can be tracked [here](https://www.github.com/Gary-Burk
 
 | Issue | Screenshot |
 | --- | --- |
+| The project is designed to be responsive from `375px` and upwards, in line with the material taught on the course LMS. Minor layout inconsistencies may occur on extra-wide (e.g. 4k/8k monitors), or smart-display devices (e.g. Nest Hub, Smart Watches, Gameboy Color, etc.), as these resolutions are outside the project's scope, as taught by Code Institute. | ![screenshot](documentation/testing/issues/responsiveness.png) |
 | The Python terminal doesn't work well with Safari, and sometimes users cannot type in the application. | n/a |
 | If a user types `CTRL`+`C` in the terminal on the live site, they can manually stop the application and receive and error. | ![screenshot](documentation/testing/issues/ctrl-c.png) |
 | The `colorama` terminal colors are fainter on Heroku when compared to the IDE locally. | ![screenshot](documentation/testing/issues/colorama.png) |

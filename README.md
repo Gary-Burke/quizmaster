@@ -360,14 +360,14 @@ There are no remaining major differences between the local version when compared
 
 | Source | Notes |
 | --- | --- |
-| [Pigeonhole Live BLog](https://blog.pigeonholelive.com/sports-trivia-questions-110-fun-questions-and-answers-to-test-your-knowledge) | Sports quiz questions |
+| [Pigeonhole Live Blog](https://blog.pigeonholelive.com/sports-trivia-questions-110-fun-questions-and-answers-to-test-your-knowledge) | Sports quiz questions |
 | [AhaSlides](https://ahaslides.com/blog/science-trivia-questions/) | Science quiz questions |
 | [TODAY](https://www.today.com/life/inspiration/geography-trivia-rcna160252) | Geography quiz questions |
 | [TODAY](https://www.today.com/life/inspiration/history-trivia-rcna217505) | History quiz questions |
 
 ### Acknowledgements
 
-- I would like to thank my Code Institute mentor, [Tim Nelson](https://www.github.com/TravelTimN) for the support throughout the development of this project.
+- I would like to thank my Code Institute mentor, [Tim Nelson](https://www.github.com/TravelTimN) for the support throughout the development of this project and his invaluable input.
 - I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) and [Code Institute Discord community](https://discord-portal.codeinstitute.net) for their feedback and assistance with technical problems and solutions.
 - I would like to thank my wife for her support and encouragement during this learning experience.
 
