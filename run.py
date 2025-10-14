@@ -53,7 +53,7 @@ def choose_category():
             print(
                 f"{Fore.RED} Invalid input.{Fore.RESET} "
                 "Please enter a number between 1-4"
-                )
+            )
 
 
 def get_player_name():
@@ -95,8 +95,10 @@ def load_game(player, category, first_round, total):
               )
     else:
         print(f"\n{Fore.MAGENTA} Okay {player}, get ready...{Fore.RESET}\n"
-              f" You have chosen the category: {category.capitalize()}\n"
-              f" We have a total of {total} questions for you. Good luck!\n"
+              f" You have chosen the category: "
+              f"{Fore.MAGENTA}{category.capitalize()}{Fore.RESET}\n"
+              f" We have a total of {Fore.MAGENTA}{total} questions "
+              f"{Fore.RESET}for you. Good luck!\n"
               )
     shuffle(game_sheet)
 
@@ -194,11 +196,13 @@ def new_game(player):
             answer = validate_input(
                 f" {Fore.CYAN}Would you like to play again? (y/n)"
                 f"\n{Fore.RESET} ").lower()
-            if answer in ("y", "ye", "yes", "y."):
-                print(f"\n {Fore.MAGENTA}Correct answer {player}!\n")
+            if answer[0] == "y":
+                print(
+                    f"\n {Fore.MAGENTA}That is the CORRECT answer {player}!\n"
+                )
                 print_categories()
                 return True
-            elif answer in ("n", "no", "n."):
+            elif answer[0] == "n":
                 print("\033c")
                 return False
             else:
