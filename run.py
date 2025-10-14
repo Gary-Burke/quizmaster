@@ -128,9 +128,11 @@ def start_game(game, total):
             f"{Fore.CYAN} Question {question_counter + 1}:"
             f"{Fore.RESET} {game[question_counter][0]}"
         )
+
         user_answer = validate_input(" Your answer:\n ")
         correct_answer = game[question_counter][1].strip()
         alt_correct_answer = game[question_counter][2].strip()
+
         if (
             user_answer.lower() == correct_answer.lower()
             or user_answer.lower() == alt_correct_answer.lower()
@@ -156,6 +158,7 @@ def game_over(player, category, result, total):
     Print a game over message to the user which
     includes the category, amount of correct answers and total questions
     """
+    clear()
     print(
         f"{Fore.MAGENTA} Well Done {player}!{Fore.RESET}\n"
         f" You have completed the category: {Fore.MAGENTA}"
@@ -163,6 +166,35 @@ def game_over(player, category, result, total):
         f" You managed to get {Fore.MAGENTA}{result}/{total}"
         f" {Fore.RESET}answers correct.\n"
     )
+
+
+def new_game(player):
+    """
+    When game is over, this function will prompt
+    the user into playing another game.
+    """
+    while True:
+        try:
+            answer = validate_input(
+                f" {Fore.CYAN}Would you like to play again? (y/n)"
+                f"\n{Fore.RESET} ").lower()
+            if answer[0] == "y":
+                print(
+                    f"\n {Fore.MAGENTA}That is the CORRECT answer {player}!\n"
+                )
+                print_categories()
+                return True
+            elif answer[0] == "n":
+                clear()
+                return False
+            else:
+                raise ValueError(
+                    f"\n{Fore.RED} Invalid input! {Fore.RESET}"
+                    "Type 'y' or 'n'. Please try again."
+                )
+
+        except ValueError as e:
+            print(e)
 
 
 # This solution is a combination from ChatGPT
@@ -186,33 +218,11 @@ def validate_input(prompt):
         )
 
 
-def new_game(player):
+def clear():
     """
-    When game is over, this function will prompt
-    the user into playing another game.
+    Helper function to clear the terminal
     """
-    while True:
-        try:
-            answer = validate_input(
-                f" {Fore.CYAN}Would you like to play again? (y/n)"
-                f"\n{Fore.RESET} ").lower()
-            if answer[0] == "y":
-                print(
-                    f"\n {Fore.MAGENTA}That is the CORRECT answer {player}!\n"
-                )
-                print_categories()
-                return True
-            elif answer[0] == "n":
-                print("\033c")
-                return False
-            else:
-                raise ValueError(
-                    f"\n{Fore.RED} Invalid input! {Fore.RESET}"
-                    "Type 'y' or 'n'. Please try again."
-                )
-
-        except ValueError as e:
-            print(e)
+    print("\033c")
 
 
 def main():
@@ -222,6 +232,7 @@ def main():
     first_round = True
     while restart_game:
         category = choose_category()
+        clear()
         game = load_game(player, category, first_round, total)
         result = start_game(game, total)
         game_over(player, category, result, total)
@@ -229,7 +240,7 @@ def main():
         first_round = False
 
 
-print("\033c")  # Clear terminal before printing
+clear()  # Clear terminal before printing
 
 print(
     f"{Fore.MAGENTA} Welcome to QUIZMASTER!\n"
