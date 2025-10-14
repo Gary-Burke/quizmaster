@@ -156,6 +156,8 @@ def game_over(player, category, result, game):
     )
 
 
+# This solution is a combination from ChatGPT
+# and research done on the re module on geeksforgeeks
 def validate_input(prompt):
     """
     Validates user input and ensures they don't submit an empty field.
@@ -165,7 +167,7 @@ def validate_input(prompt):
     allowed_char = re.compile(r"^[A-Za-z0-9_ -]+$")
     while True:
         user_input = input(prompt).strip()
-        if (allowed_char.fullmatch(user_input)) and (len(user_input) > 0):
+        if (allowed_char.fullmatch(user_input)) and user_input:
             return user_input
         print(
             f"{Fore.RED}\n Invalid Input! {Fore.RESET}Input can't be empty"
