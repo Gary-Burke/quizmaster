@@ -104,7 +104,7 @@ def load_game(player, category, first_round, total):
     shuffle(game_sheet)
 
     game = [game_sheet[i] for i in range(total)]
-    
+
     return game
 
 
@@ -181,6 +181,11 @@ def new_game(player):
                 return True
             elif answer[0] == "n":
                 clear()
+                print(
+                    f" Thank you {Fore.MAGENTA}{player} {Fore.RESET}for"
+                    f" playing {Fore.MAGENTA}QUIZMASTER!{Fore.RESET}\n"
+                    "\n We hope to see you again soon!"
+                )
                 return False
             else:
                 raise ValueError(
