@@ -33,7 +33,7 @@ def print_categories():
     """
     print(f"{Fore.CYAN} Categories:")
     for num, name in CATEGORIES.items():
-        print(f"  {num} - {name.capitalize()}")
+        print(f"  {num}: {name.capitalize()}")
 
 
 def choose_category():
@@ -50,7 +50,10 @@ def choose_category():
             ))
             return CATEGORIES[choice]
         except (ValueError, KeyError):
-            print(" Invalid input. Please enter a number between 1-4")
+            print(
+                f"{Fore.RED} Invalid input.{Fore.RESET} "
+                "Please enter a number between 1-4"
+                )
 
 
 def get_player_name():
