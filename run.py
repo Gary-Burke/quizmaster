@@ -100,16 +100,11 @@ def load_game(player, category, first_round, total):
               f" We have a total of {Fore.MAGENTA}{total} questions "
               f"{Fore.RESET}for you. Good luck!\n"
               )
+
     shuffle(game_sheet)
 
-    game = []
-
-    for i in range(total):
-        if len(game) < total:
-            game.append(game_sheet[i])
-
     game = [game_sheet[i] for i in range(total)]
-
+    
     return game
 
 
