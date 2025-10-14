@@ -58,9 +58,21 @@ def get_player_name():
     Ask user to supply their name so that it can be
     used in a personalized message when the game is over.
     """
-    print(f"\n{Fore.CYAN} First and most important question:")
-    player_name = validate_input(" What is your username?\n ")
-    return player_name
+    print(f"\n{Fore.CYAN} First question:")
+
+    while True:
+        player_name = validate_input(
+            " What is your username? (max. length 15. "
+            "No Special characters)\n "
+        )
+        if len(player_name) > 15:
+            print(
+                f"\n{Fore.RED} Invalid Username. {Fore.RESET}"
+                "Username must not exceed 15 characters.\n"
+                " Please try again.\n"
+            )
+        else:
+            return player_name
 
 
 def load_game(player, category, first_round):
@@ -153,9 +165,10 @@ def validate_input(prompt):
         if (allowed_char.fullmatch(user_input)) and (len(user_input) > 0):
             return user_input
         print(
-            f"{Fore.RED} Invalid Input! {Fore.RESET}Input can't be empty and "
-            "may only contain letters, numbers, spaces, '_' and '-'. "
-            "Please try again."
+            f"{Fore.RED}\n Invalid Input! {Fore.RESET}Input can't be empty"
+            " and may only contain\n"
+            " letters, numbers, spaces, '_' and '-'. "
+            "Please try again.\n"
         )
 
 

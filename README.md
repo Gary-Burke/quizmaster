@@ -175,6 +175,7 @@ I've used the following Python packages and external imports.
 - `google.oauth2.service_account`: used for the Google Sheets API credentials
 - `shuffle from random`: used to randomize the order of questions in the list
 - `colorama`: used for including color in the terminal
+- `re`: used to check and limit user input
 
 ## Agile Development Process
 
