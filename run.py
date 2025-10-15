@@ -114,7 +114,7 @@ def start_game(game, total):
     Display one question and ask user for an answer.
     Check user answer against stored answer and provide feedback.
     Use lower method to avoid spelling or typo mistakes.
-    USe split to cycle through list of alternative spellings, typos.
+    Use strip and split to cycle through list of alternative spellings, typos.
     """
     question_counter = 0
     correct_answers = 0
@@ -129,7 +129,9 @@ def start_game(game, total):
 
         correct_answer = game[question_counter][1].strip()
 
-        alt_correct = re.split(r"\s*,\s*", game[question_counter][2].lower())
+        alt_correct = game[question_counter][2].lower()
+
+        alt_correct = [x.strip() for x in alt_correct.split(',')]
 
         if (
             user_answer.lower() == correct_answer.lower()

@@ -354,11 +354,14 @@ There are no remaining major differences between the local version when compared
 | [Python Tutor](https://pythontutor.com) | Additional Python help |
 | [StackOverflow](https://stackoverflow.com/a/18449421/30846754) | Accessing a list of lists |
 | [StackOverflow](https://stackoverflow.com/a/50921841) | Clear screen in Python |
+| [StackOverflow](https://stackoverflow.com/a/4071407/30846754) | Help with strip and split to cycle through list |
 | [ChatGPT](https://chatgpt.com) | Help with code logic and explanations. Used to rewrite the introduction for the README |
 | [ChatGPT](https://chatgpt.com) | Used to generate a Mermaid Flowchart from my existing flowchart |
 | [Towards Data Science](https://towardsdatascience.com/20-newbie-mistakes-that-even-skilled-python-programmers-make-6879048731a4/) | 20 Newbie Mistakes that Even Skilled Python Programmers Make |
 | [Colorama](https://www.youtube.com/watch?v=u51Zjlnui4Y) | Adding color in Python |
 | [geeksforgeeks](https://www.geeksforgeeks.org/python/python-program-to-verify-that-a-string-only-contains-letters-numbers-underscores-and-dashes/) | Restrict input in python from a user to only include certain characters |
+
+
 
 ### Media
 
