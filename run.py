@@ -131,6 +131,7 @@ def start_game(game, total):
 
         alt_correct = game[question_counter][2].lower()
 
+        #  Solution from https://stackoverflow.com/a/4071407/30846754
         alt_correct = [x.strip() for x in alt_correct.split(',')]
 
         if (
@@ -202,8 +203,7 @@ def new_game(player):
             print(e)
 
 
-# This solution is a combination from ChatGPT
-# and research done on the re module on geeksforgeeks
+# Solution from ChatGPT and geeksforgeeks.org, see README
 def validate_input(prompt):
     """
     Validates user input and ensures they don't submit an empty field.
