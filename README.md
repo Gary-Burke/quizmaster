@@ -268,7 +268,9 @@ The Python terminal window should now be connected and deployed to Heroku!
 
 This application uses [Google Sheets](https://docs.google.com/spreadsheets) to handle a "makeshift" database on the live site.
 
-To run your own version of this application, you will need to create your own Google Sheet with four sheets named `sport`, `science`, `geography` and `history`. Each workseet consists out of a question in column one, followed by the correct answer in the second column and then a third column with an alternative format answer.
+To run your own version of this application, you will need to create your own Google Sheet with four sheets named `sport`, `science`, `geography` and `history`. Each workseet consists out of a question in column one, followed by the correct answer in the second column and then a third column with a list of alternative format answers separated by commas.
+
+The lists used for this project can be directly viewed here: [Quizmaster](https://docs.google.com/spreadsheets/d/1DrHiq-RkH5NXZ3xJDsmQl2AqIe9iCx8Cr7Jjed4irLk/edit?usp=sharing)
 
  ![screenshot](documentation/readme/google-sheets.png)
 
