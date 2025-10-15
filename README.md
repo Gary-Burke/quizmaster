@@ -39,32 +39,6 @@ The live deployed application can be viewed here: [Heroku](https://quizmaster-ga
 | As a player | I would like to be able to answer a question with a number or with text, e.g. "2" or "Two" | this would add to the user experience. |
 | As a player | I would like to be able to start another round of the quiz at the end of the game | this would add to the user experience and create a natural flow of events. |
 
-
-### Wireframes
-
-To follow best practice, a flowchart was created to showcase the progression of the Python app.
-I've used [Lucidchart](https://www.lucidchart.com/pages/examples/flowchart-maker) to design my app flowchart.
-
-**[Click to see Flowchart](#flowchart)**
-
-### Structure
-
-**User Flow**
-1. User opens the app → Sees the rules and categories listed.
-2. Program asks user for his name → User inputs name into the input field
-3. Program asks user to choose a category → User inputs number to chooses category.
-3. Program gets the corresponding worksheet from Google Sheets for the quiz.
-4. User sees start game message → The user name, selected category and total number of questions are displayed
-5. User sees first question → User supplies answer
-6. User gets feedback → Asnwer was correct or incorrect
-7. User gets feedback → If answer was incorrect, then correct answer is displayed
-8. User sees next question → Game repeats until all questions have been cycled through
-9. App informs user that the game is over and how many answers he got correct.
-10. Program asks user if he wants to play again →    
-→ No → Program ends game and clears terminal  
-→ Yes → Program starts new game
-
-
 ### Features
 
 ### Existing Features
@@ -109,6 +83,23 @@ I've used [Lucidchart](https://www.lucidchart.com/pages/examples/flowchart-maker
 ## Database Design
 
 ### Data Model
+
+#### Structure
+
+**User Flow**
+1. User opens the app → Sees the rules and categories listed.
+2. Program asks user for his name → User inputs name into the input field
+3. Program asks user to choose a category → User inputs number to chooses category.
+3. Program gets the corresponding worksheet from Google Sheets for the quiz.
+4. User sees start game message → The user name, selected category and total number of questions are displayed
+5. User sees first question → User supplies answer
+6. User gets feedback → Asnwer was correct or incorrect
+7. User gets feedback → If answer was incorrect, then correct answer is displayed
+8. User sees next question → Game repeats until all questions have been cycled through
+9. App informs user that the game is over and how many answers he got correct.
+10. Program asks user if he wants to play again →    
+→ No → Program ends game and clears terminal  
+→ Yes → Program starts new game
 
 #### Flowchart
 
