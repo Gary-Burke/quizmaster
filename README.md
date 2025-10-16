@@ -29,14 +29,14 @@ The live deployed application can be viewed here: [Heroku](https://quizmaster-ga
 | Target | Expectation | Outcome |
 | --- | --- | --- |
 | As a player | it would be good to see a clear and concise landing page | so that I know what the game is about. |
-| As a player | I want to see the rules clearly seperated from the welcome message | and kept short and direct. |
+| As a player | I want to see the rules clearly separated from the welcome message | and kept short and direct. |
 | As a player | it would be exciting if I could choose different categories | with which to play the quiz game. |
 | As a player | it would be good to know how many questions there are in the selected quiz | so as to know the length of the game. |
 | As a player | my input needs to be validated and a clear error message needs to be displayed when my input is invalid |  so as to ensure a proper and smooth gaming experience. |
 | As a player | I want to get feedback on my answers, whether they are right or wrong | and if wrong, I want to know what the actual correct answer is. |
-| As a player | I would like to be able to submit my name in the game | to get a personalized feedback when the game is over. |
+| As a player | I would like to be able to submit my name in the game | to get personalized feedback when the game is over. |
 | As a player | it would be a good experience to see how many answers I got correct | so that I can challenge myself again next time. |
-| As a player | I would like to be able to answer a question with a number or with text, e.g. "2" or "Two" | this would add to the user experience. |
+| As a player | I would like to be able to answer a question with a number or with text,e.g., "2" or "Two" | this would add to the user experience. |
 | As a player | I would like to be able to start another round of the quiz at the end of the game | this would add to the user experience and create a natural flow of events. |
 
 ### Features
@@ -45,20 +45,20 @@ The live deployed application can be viewed here: [Heroku](https://quizmaster-ga
 
 | Feature | Notes | Screenshot |
 | --- | --- | --- |
-| Category Selection | The user can choose which category he wants to be quizzed on. This makes the game more versatile and fun. | ![screenshot](documentation/features/01-category.png) |
+| Category Selection | The user can choose which category they want to be quizzed on. This makes the game more versatile and fun. | ![screenshot](documentation/features/01-category.png) |
 | Add Name | The user gets to add his name for the game. This is used to provide a customized message to the user, making him feel welcomed. | ![screenshot](documentation/features/02-name.png) |
-| Welcome Message | The program greets the user by name, confirms the selected category and displays the amount of questions. This gives the user all the information needed as the game is about to start. | ![screenshot](documentation/features/03-welcome.png) |
-| Questions & Feedback | The program informs the player when an answer is correct or incorrect and if incorrect, provides the actual answer. Although the input is spelling sensitive, it is not case sensitive. This provides a better player experience. | ![screenshot](documentation/features/04-quiz-feedback.png) |
-| Questions & Feedback | The program makes provision for answers to be written in both words or numbers, when applicable, e.g. "Two" or "2". In some cases typos and spelling mistakes are accounted for but this is not extensive. | ![screenshot](documentation/features/05-answers.png) |
+| Welcome Message | The program greets the user by name, confirms the selected category, and displays the number of questions. This gives the user all the information needed as the game is about to start. | ![screenshot](documentation/features/03-welcome.png) |
+| Questions & Feedback | The program informs the player when an answer is correct or incorrect, and if incorrect, provides the actual answer. Although the input is spelling sensitive, it is not case sensitive. This provides a better player experience. | ![screenshot](documentation/features/04-quiz-feedback.png) |
+| Questions & Feedback | The program makes provision for answers to be written in both words or numbers, when applicable,e.g., "Two" or "2". Typos and spelling mistakes are accounted for, but this is not extensive. | ![screenshot](documentation/features/05-answers.png) |
 | Game Over Message | The program informs the player when the quiz has been completed with a customized message, which also provides feedback on how many questions the player got correct. This adds a competitive edge to the game. | ![screenshot](documentation/features/06-game-over.png) |
-| New Game | This feature allows the user to start another round of the game, without having to add his name again. | ![screenshot](documentation/features/07-new-game.png) |
+| New Game | This feature allows the user to start another round of the game, without having to add their name again. | ![screenshot](documentation/features/07-new-game.png) |
 
 > [!NOTE]  
 > For all data validation features, please refer to the defensive testing in the [TESTING.md](TESTING.md) file.
 
 ### Future Features
 
-- **Spelling and typos**: As this game relies on user input, it would be beneficial to add an extensie list of rules or exceptions, to catch spelling mistakes, typos or alternative spellings from the user and account for them.
+- **Spelling and typos**: As this game relies on user input, it would be beneficial to add an extensive list of rules or exceptions, to catch spelling mistakes, typos or alternative spellings from the user and account for them.
 - **Add more categories**: I would like to expand the game by adding several more categories of question to choose from.
 - **High Score API**: It would add value to the game to be able to store and track the high scores for each player and their various categories.
 
@@ -78,6 +78,8 @@ The live deployed application can be viewed here: [Heroku](https://quizmaster-ga
 | [![badge](https://img.shields.io/badge/Lucidchart-grey?logo=lucid&logoColor=F97B2C)](https://www.lucidchart.com) | Flow diagrams for mapping the app's logic. |
 | [![badge](https://img.shields.io/badge/W3Schools-grey?logo=w3schools&logoColor=04AA6D)](https://www.w3schools.com) | Tutorials/Reference Guide |
 | [![badge](https://img.shields.io/badge/StackOverflow-grey?logo=stackoverflow&logoColor=F58025)](https://stackoverflow.com) | Troubleshooting and Debugging |
+| [![badge](https://img.shields.io/badge/Grammarly-grey?logo=grammarly&logoColor=00A67E)](https://grammarly.com) | Grammar and spell check |
+
 
 
 ## Database Design
@@ -89,21 +91,21 @@ The live deployed application can be viewed here: [Heroku](https://quizmaster-ga
 **User Flow**
 1. User opens the app → Sees the rules and categories listed.
 2. Program asks user for his name → User inputs name into the input field
-3. Program asks user to choose a category → User inputs number to chooses category.
+3. Program asks user to choose a category → User inputs a number to choose the category.
 3. Program gets the corresponding worksheet from Google Sheets for the quiz.
 4. User sees start game message → The user name, selected category and total number of questions are displayed
 5. User sees first question → User supplies answer
-6. User gets feedback → Asnwer was correct or incorrect
-7. User gets feedback → If answer was incorrect, then correct answer is displayed
+6. User gets feedback → Answer was correct or incorrect
+7. User gets feedback → If the answer was incorrect, then the correct answer is displayed
 8. User sees next question → Game repeats until all questions have been cycled through
-9. App informs user that the game is over and how many answers he got correct.
+9. App informs the user that the game is over and how many answers they got correct.
 10. Program asks user if he wants to play again →    
 → No → Program ends game and clears terminal  
 → Yes → Program starts new game
 
 #### Flowchart
 
-To follow best practice, a flowchart was created for the app's logic, and mapped out using a free version of [Lucidchart](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning). The flowchart below represents the main process of this Python program. It shows the entire cycle of the application.
+To follow best practice, a flowchart was created for the app's logic and mapped out using a free version of [Lucidchart](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning). The flowchart below represents the main process of this Python program. It shows the entire cycle of the application.
 
 ![screenshot](documentation/readme/flowchart.png)
 
@@ -154,7 +156,7 @@ The primary functions used on this application are:
 - `validate_empty_input()`
     -  Validates user input and ensures they don't submit an empty field
 - `new_game()`
-    - When game is over, this function will prompt the user into playing another game.
+    - When the game is over, this function will prompt the user to play another game.
 - `clear()`
     - Helper function to clear the terminal.
 - `main()`
@@ -180,7 +182,7 @@ I've used the following Python packages and external imports.
 
 ### GitHub Issues
 
-[GitHub Issues](https://www.github.com/Gary-Burke/quizmaster/issues) served as an another Agile tool. There, I managed my User Stories and Milestone tasks, and tracked any issues/bugs.
+[GitHub Issues](https://www.github.com/Gary-Burke/quizmaster/issues) served as another Agile tool. There, I managed my User Stories and Milestone tasks and tracked any issues/bugs.
 
 | Link | Screenshot |
 | --- | --- |
@@ -205,7 +207,7 @@ I have listed my Epics into User Stories and applied the "MoSCoW" prioritization
 
 Code Institute has provided a [template](https://github.com/Code-Institute-Org/python-essentials-template) to display the terminal view of this backend application in a modern web browser. This is to improve the accessibility of the project to others.
 
-The live deployed application can be found deployed on [Heroku](https://quizmaster-game-dfe6a1b8c370.herokuapp.com).
+The live deployed application can be found here: [Heroku](https://quizmaster-game-dfe6a1b8c370.herokuapp.com)
 
 ### Heroku Deployment
 
@@ -218,7 +220,7 @@ Deployment steps are as follows, after account setup:
 - From the new app **Settings**, click **Reveal Config Vars**, and set the value of **KEY** to `PORT`, and the **VALUE** to `8000` then select **ADD**.
 - If using any confidential credentials, such as **CREDS.JSON**, then these should be pasted in the Config Variables as well.
 - Further down, to support dependencies, select **Add Buildpack**.
-- The order of the buildpacks is important; select `Python` first, then `Node.js` second. (if they are not in this order, you can drag them to rearrange them)
+- The order of the buildpacks is important; select `Python` first, then `Node.js` second. (If they are not in this order, you can drag them to rearrange them).
 
 Heroku needs some additional files in order to deploy properly.
 
@@ -230,7 +232,7 @@ You can install this project's **[requirements.txt](requirements.txt)** (*where 
 
 - `pip3 install -r requirements.txt`
 
-If you have your own packages that have been installed, then the requirements file needs updated using:
+If you have your own packages that have been installed, then the requirements file needs to be updated using:
 
 - `pip3 freeze --local > requirements.txt`
 
@@ -261,7 +263,7 @@ The Python terminal window should now be connected and deployed to Heroku!
 
 This application uses [Google Sheets](https://docs.google.com/spreadsheets) to handle a "makeshift" database on the live site.
 
-To run your own version of this application, you will need to create your own Google Sheet with four sheets named `sport`, `science`, `geography` and `history`. Each workseet consists out of a question in column one, followed by the correct answer in the second column and then a third column with a list of alternative format answers separated by commas.
+To run your own version of this application, you will need to create your own Google Sheet with four sheets named `sport`, `science`, `geography` and `history`. Each worksheet consists of a question in column one, followed by the correct answer in the second column and then a third column with a list of alternative format answers separated by commas.
 
 The lists used for this project can be directly viewed here: [Quizmaster](https://docs.google.com/spreadsheets/d/1DrHiq-RkH5NXZ3xJDsmQl2AqIe9iCx8Cr7Jjed4irLk/edit?usp=sharing)
 
@@ -274,7 +276,7 @@ A credentials file in `.JSON` format from the Google Cloud Platform is also mand
 1. From the dashboard click on "Select a project", and then the **NEW PROJECT** button.
 2. Give the project a name, and then click **CREATE**.
 3. Click **SELECT PROJECT** to get to the project page.
-4. From the side-menu, select "APIs & Services", then select "Library".
+4. From the side menu, select "APIs & Services", then select "Library".
 5. Search for the "Google Drive API", select it, and then click on **ENABLE**.
 6. Click on the **CREATE CREDENTIALS** button.
 7. From the "Which API are you using?" dropdown menu, choose **Google Drive API**.
@@ -352,7 +354,7 @@ There are no remaining major differences between the local version when compared
 | [ChatGPT](https://chatgpt.com) | Used to generate a Mermaid Flowchart from my existing flowchart |
 | [Towards Data Science](https://towardsdatascience.com/20-newbie-mistakes-that-even-skilled-python-programmers-make-6879048731a4/) | 20 Newbie Mistakes that Even Skilled Python Programmers Make |
 | [Colorama](https://www.youtube.com/watch?v=u51Zjlnui4Y) | Adding color in Python |
-| [geeksforgeeks](https://www.geeksforgeeks.org/python/python-program-to-verify-that-a-string-only-contains-letters-numbers-underscores-and-dashes/) | Restrict input in python from a user to only include certain characters |
+| [geeksforgeeks](https://www.geeksforgeeks.org/python/python-program-to-verify-that-a-string-only-contains-letters-numbers-underscores-and-dashes/) | Restrict input in Python from a user to only include certain characters |
 
 
 
@@ -367,7 +369,7 @@ There are no remaining major differences between the local version when compared
 
 ### Acknowledgements
 
-- I would like to thank my Code Institute mentor, [Tim Nelson](https://www.github.com/TravelTimN) for the support throughout the development of this project and his invaluable input.
+- I would like to thank my Code Institute mentor, [Tim Nelson](https://www.github.com/TravelTimN), for the support throughout the development of this project and his invaluable input.
 - I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) and [Code Institute Discord community](https://discord-portal.codeinstitute.net) for their feedback and assistance with technical problems and solutions.
 - I would like to thank my wife for her support and encouragement during this learning experience.
 
