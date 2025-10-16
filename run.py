@@ -207,18 +207,17 @@ def validate_input(prompt):
     """
     Validates user input and ensures they don't submit an empty field.
     Using the re library, we limit the input here to contain only
-    letters, numbers, spaces, '_' and '-'
+    letters, numbers, spaces, '_', '-' and apostrophe.
     """
-    allowed_char = re.compile(r"^[A-Za-z0-9_ -]+$")
+    allowed_char = re.compile(r"^[A-Za-z0-9_ '-]+$")
     while True:
         user_input = input(prompt).strip()
         if (allowed_char.fullmatch(user_input)) and user_input:
             return user_input
         print(
             f"{Fore.RED}\n Invalid Input! {Fore.RESET}Input can't be empty"
-            " and may only contain\n"
-            " letters, numbers, spaces, '_' and '-'. "
-            "Please try again.\n"
+            " and no special characters except ( _ , - ' )\n"
+            " Please try again.\n"
         )
 
 
