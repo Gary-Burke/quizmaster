@@ -159,7 +159,6 @@ def game_over(player, category, result, total):
     Print a game over message to the user which
     includes the category, amount of correct answers and total questions
     """
-    clear()
     print(
         f"{Fore.MAGENTA} Well Done {player}!{Fore.RESET}\n"
         f" You have completed the category: {Fore.MAGENTA}"
