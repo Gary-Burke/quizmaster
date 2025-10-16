@@ -121,11 +121,13 @@ def start_game(game, total):
 
     while question_counter < total:
         print(
-            f"{Fore.CYAN} Question {question_counter + 1}:"
+            f"{Fore.CYAN} Question {question_counter + 1}:\n"
             f"{Fore.RESET} {game[question_counter][0]}"
         )
 
-        user_answer = validate_input(" Your answer:\n ")
+        user_answer = validate_input(
+            f"{Fore.MAGENTA} Your answer:{Fore.RESET}\n "
+        )
 
         correct_answer = game[question_counter][1].strip()
 
