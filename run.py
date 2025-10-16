@@ -216,8 +216,9 @@ def validate_input(prompt):
             return user_input
         print(
             f"{Fore.RED}\n Invalid Input! {Fore.RESET}Input can't be empty"
-            " and no special characters except ( _ , - ' )\n"
-            " Please try again.\n"
+            " and no special characters.\n"
+            f"{Fore.GREEN} Valid{Fore.RESET} characters: ({Fore.GREEN} _ - '"
+            f"{Fore.RESET} ). Please try again.\n"
         )
 
 
