@@ -19,18 +19,15 @@ Defensive programming was manually tested with the below user acceptance testing
 
 | Feature | Expectation | Test | Result | Screenshot |
 | --- | --- | --- | --- | --- |
-| Category Selection | Feature is expected to allow users to input the corresponding number of the category they would like to play. | Entered a valid selection. | Program moves to next step. | ![screenshot](documentation/defensive/category-valid.png) |
-| Data Validation Category| Feature is expected to catch any number below 1. | Entered an invalid selection e.g. 0. | Program catches invalid input and informs user. | ![screenshot](documentation/defensive/category-min-range.png) |
-| Data Validation Category| Feature is expected to catch any number above 4. | Entered an invalid selection e.g. 5. | Program catches invalid input and informs user. | ![screenshot](documentation/defensive/category-max-range.png) |
-| Data Validation Category| Feature is expected to catch any input that is not an integer. | Entered an invalid selection e.g. string. | Program catches invalid input and informs user. | ![screenshot](documentation/defensive/category-string.png) |
-| Data Validation Category| Feature is expected to catch any empty input. | Entered an empty input. | Program catches invalid input and informs user. | ![screenshot](documentation/defensive/category-empty.png) |
-| Input Name | Feature is expected to let user add his name. | Entered a valid name e.g. string. | Program moves to next step. | ![screenshot](documentation/defensive/name-valid.png) |
-| Data Validation Name | Feature is expected to catch any empty input. | Entered an empty input. | Program catches invalid input and informs user. | ![screenshot](documentation/defensive/name-empty.png) |
-| Input Answer | Feature is expected to let user add his answer. | Entered a valid answer e.g. string. | Program moves to next step. | ![screenshot](documentation/defensive/answer-valid.png) |
-| Data Validation Answer | Feature is expected to catch any empty input. | Entered an empty input. | Program catches invalid input and informs user. | ![screenshot](documentation/defensive/answer-empty.png) |
-| New Game | Feature is expected to let user choose to play another game. | Entered a valid positive response e.g. "y". | Program starts new game. | ![screenshot](documentation/defensive/new-game-yes.png) |
-| New Game | Feature is expected to let user choose to play another game. | Entered a valid negative response e.g. "n". | Program clears terminal and ends itself. | ![screenshot](documentation/defensive/new-game-no.png) |
-| Data Validation New Game | Feature is expected to catch any empty input. | Entered an empty input. | Program catches invalid input and informs user. | ![screenshot](documentation/defensive/new-game-empty.png) |
+| Name Input | Feature is expected to let user add his name. | Entered a valid name e.g. "The Chosen One". | Program moves to the next step. | ![screenshot](documentation/defensive/name-valid.png) |
+| Name Input | Feature is expected to catch any invalid input. | Entered the following: Name > 15 characters. A special character "!". Empty input. | Program catches invalid input and informs user. | ![screenshot](documentation/defensive/name-error.png) |
+| Category Input | Feature is expected to allow users to input the corresponding number of the category they would like to play. | Entered a valid selection. | Program moves to the next step. | ![screenshot](documentation/defensive/category-valid.png) |
+| Category Input| Feature is expected to catch any input that is not an integer or is outside of the category range e.g. 1-4. | Entered the following: Empty input. String e.g. "something". Integers outside of range e.g. "0" and "5". | Program catches invalid input and informs user. | ![screenshot](documentation/defensive/category-error.png) |
+| Answer Input | Feature is expected to let user add his answer. | Entered a valid answer e.g. string. | Program moves to the next step. | ![screenshot](documentation/defensive/answer-valid.png) |
+| Answer Input | Feature is expected to catch any invalid input. | Entered the following: Empty input. A special character "!". | Program catches invalid input and informs user. | ![screenshot](documentation/defensive/answer-error.png) |
+| New Game Input | Feature is expected to let user choose to play another game. Any response starting with "y" will be accepted. | Entered a valid positive response e.g. "y". | Program starts new game. | ![screenshot](documentation/defensive/new-game-yes.png) |
+| New Game Input | Feature is expected to let user choose to play another game. Any response starting with "n" will be accepted. | Entered a valid negative response e.g. "n". | Program clears terminal, ends the game and displays goodbye message afterwards. | ![screenshot](documentation/defensive/new-game-no.png) |
+| New Game Input | Feature is expected to catch any invalid input. | Entered the following: Empty input. String not starting with "y" or "n" e.g. "ihjuo". A special character "!!!!". | Program catches invalid input and informs user. | ![screenshot](documentation/defensive/new-game-error.png) |
 
 > [!NOTE]  
 > As a player may use a pseudonym as a name and as answers might consist out of numbers, both of these inputs allow numbers as valid data.
@@ -43,7 +40,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | As a player | I want to see the rules clearly seperated from the welcome message | and kept short and direct. | ![screenshot](documentation/features/01-category.png) |
 | As a player | it would be exciting if I could choose different categories | with which to play the quiz game. | ![screenshot](documentation/features/01-category.png) |
 | As a player | it would be good to know how many questions there are in the selected quiz | so as to know the length of the game. | ![screenshot](documentation/features/03-welcome.png) |
-| As a player | my input needs to be validated and a clear error message needs to be displayed when my input is invalid |  so as to ensure a proper and smooth gaming experience. | ![screenshot](documentation/defensive/category-string.png) |
+| As a player | my input needs to be validated and a clear error message needs to be displayed when my input is invalid |  so as to ensure a proper and smooth gaming experience. | ![screenshot](documentation/defensive/category-error.png) |
 | As a player | I want to get feedback on my answers, whether they are right or wrong | and if wrong, I want to know what the actual correct answer is. | ![screenshot](documentation/features/04-quiz-feedback.png) |
 | As a player | I would like to be able to submit my name in the game | to get a personalized feedback when the game is over. | ![screenshot](documentation/features/06-game-over.png) |
 | As a player | it would be a good experience to see how many answers I got correct | so that I can challenge myself again next time. | ![screenshot](documentation/features/06-game-over.png) |
