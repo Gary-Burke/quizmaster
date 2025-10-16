@@ -13,6 +13,31 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 | --- | --- | --- | --- | --- |
 | root | [run.py](https://github.com/Gary-Burke/quizmaster/blob/main/run.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Gary-Burke/quizmaster/main/run.py) | ![screenshot](documentation/validation/py--run.png) |  |
 
+## Responsiveness
+
+> [!NOTE]  
+>The Python terminal was provided to me by Code Institute, and there are known issues with it not being responsive. Since I am limited to using this, these problems and their solutions fall outside of this project's scope. Therefore, I have listed the known issues below without further documentation or screenshots.
+
+- `overflow-x` on mobile devices
+- iPhone/Apple devices do not allow users to type anything into the terminal.
+- Android devices do work on mobile, but it sometimes decides to stop randomly.
+- The project is designed to be responsive from `375px` and upwards. 
+- Minor layout inconsistencies may occur on extra-wide (e.g. 4k/8k monitors), or smart-display devices (e.g. Nest Hub, Smart Watches, Gameboy Color, etc.).
+
+## Browser Compatibility
+
+> [!NOTE]  
+>The Python terminal was provided to me by Code Institute, and there are known issues with it not being responsive. Since I am limited to using this, these problems and their solutions fall outside of this project's scope. Therefore, I have listed the known issues below without further documentation or screenshots.
+
+- Safari: doesn't work well for any Apple devices except MacBooks
+
+## Lighthouse Audit
+
+> [!NOTE]  
+>The Python terminal was provided to me by Code Institute, and there are known issues with it not being responsive. Since I am limited to using this, these problems and their solutions fall outside of this project's scope. Therefore, I have listed the known issues below without further documentation or screenshots.
+
+- Mobile: external render-blocking resources & third-party cookies lower performance and best practices scores.
+
 ## Defensive Programming
 
 Defensive programming was manually tested with the below user acceptance testing:
@@ -30,7 +55,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | New Game Input | Feature is expected to catch any invalid input. | Entered the following: Empty input. String not starting with "y" or "n" e.g. "ihjuo". A special character "!!!!". | Program catches invalid input and informs user. | ![screenshot](documentation/defensive/new-game-error.png) |
 
 > [!NOTE]  
-> As a player may use a pseudonym as a name and as answers might consist out of numbers, both of these inputs allow numbers as valid data.
+> Data input validation has been limited to allow alphanumeric characters, underscores, hyphens, spaces and apostrophes, as these all relate to names and usernames.
 
 ## User Story Testing
 
