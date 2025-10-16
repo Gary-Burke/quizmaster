@@ -213,7 +213,7 @@ def validate_input(prompt):
     """
     allowed_char = re.compile(r"^[A-Za-z0-9_ '-]+$")
     while True:
-        user_input = input(prompt).strip()
+        user_input = " ".join(input(prompt).split())
         if (allowed_char.fullmatch(user_input)) and user_input:
             return user_input
         print(
