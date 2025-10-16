@@ -155,6 +155,8 @@ The primary functions used on this application are:
     -  Validates user input and ensures they don't submit an empty field
 - `new_game()`
     - When game is over, this function will prompt the user into playing another game.
+- `clear()`
+    - Helper function to clear the terminal.
 - `main()`
     - Run all program functions.
 
