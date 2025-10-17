@@ -61,6 +61,8 @@ The live deployed application can be viewed here: [Heroku](https://quizmaster-ga
 - **Spelling and typos**: As this game relies on user input, it would be beneficial to add an extensive list of rules or exceptions, to catch spelling mistakes, typos or alternative spellings from the user and account for them.
 - **Add more categories**: I would like to expand the game by adding several more categories of question to choose from.
 - **High Score API**: It would add value to the game to be able to store and track the high scores for each player and their various categories.
+- **Random Category**: It would be useful to add an additional category, called "Random" to the list. In this case, the program will decide on a random category for the player.
+- **Mixed Category**: It would make the game even more exciting and challenging, if a user could choose a mixed questions category, where the program chooses random questions from all the different categories.
 
 
 ## Tools & Technologies
