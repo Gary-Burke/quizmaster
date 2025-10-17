@@ -87,14 +87,14 @@ def load_game(player, category, first_round, total):
     """
     game_sheet = SHEET.worksheet(category).get_all_values()
     if first_round:
-        print(f"\n{Fore.MAGENTA} Welcome {player}!{Fore.RESET}\n"
+        print(f"{Fore.MAGENTA} Welcome {player}!{Fore.RESET}\n"
               f" You have chosen the category: "
               f"{Fore.MAGENTA}{category.capitalize()}{Fore.RESET}\n"
               f" We have a total of {Fore.MAGENTA}{total} questions "
               f"{Fore.RESET}for you. Good luck!\n"
               )
     else:
-        print(f"\n{Fore.MAGENTA} Okay {player}, get ready...{Fore.RESET}\n"
+        print(f"{Fore.MAGENTA} Okay {player}, get ready...{Fore.RESET}\n"
               f" You have chosen the category: "
               f"{Fore.MAGENTA}{category.capitalize()}{Fore.RESET}\n"
               f" We have a total of {Fore.MAGENTA}{total} questions "
@@ -181,8 +181,11 @@ def new_game(player):
                 f" {Fore.CYAN}Would you like to play again? (y/n)"
                 f"\n{Fore.RESET} ").lower()
             if answer[0] == "y":
+                clear()
                 print(
-                    f"\n {Fore.MAGENTA}That is the CORRECT answer {player}!\n"
+                    f"{Fore.MAGENTA} {player}, thank you for choosing to"
+                    " play again.\n"
+                    " You are now my new best friend!\n"
                 )
                 print_categories()
                 return True
