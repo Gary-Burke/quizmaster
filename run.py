@@ -87,17 +87,17 @@ def load_game(player, category, first_round, total):
     """
     game_sheet = SHEET.worksheet(category).get_all_values()
     if first_round:
-        print(f"{Fore.MAGENTA} Welcome {player}!{Fore.RESET}\n"
+        print(f"{Fore.GREEN} Welcome {player}!{Fore.RESET}\n"
               f" You have chosen the category: "
-              f"{Fore.MAGENTA}{category.capitalize()}{Fore.RESET}\n"
-              f" We have a total of {Fore.MAGENTA}{total} questions "
+              f"{Fore.GREEN}{category.capitalize()}{Fore.RESET}\n"
+              f" We have a total of {Fore.GREEN}{total} questions "
               f"{Fore.RESET}for you. Good luck!\n"
               )
     else:
-        print(f"{Fore.MAGENTA} Okay {player}, get ready...{Fore.RESET}\n"
+        print(f"{Fore.GREEN} Okay {player}, get ready...{Fore.RESET}\n"
               f" You have chosen the category: "
-              f"{Fore.MAGENTA}{category.capitalize()}{Fore.RESET}\n"
-              f" We have a total of {Fore.MAGENTA}{total} questions "
+              f"{Fore.GREEN}{category.capitalize()}{Fore.RESET}\n"
+              f" We have a total of {Fore.GREEN}{total} questions "
               f"{Fore.RESET}for you. Good luck!\n"
               )
 
@@ -126,7 +126,7 @@ def start_game(game, total):
         )
 
         user_answer = validate_input(
-            f"{Fore.MAGENTA} Your answer:{Fore.RESET}\n "
+            f"{Fore.CYAN} Your answer:{Fore.RESET}\n "
         )
 
         correct_answer = game[question_counter][1].strip()
@@ -162,10 +162,10 @@ def game_over(player, category, result, total):
     includes the category, amount of correct answers and total questions
     """
     print(
-        f"{Fore.MAGENTA} Well Done {player}!{Fore.RESET}\n"
-        f" You have completed the category: {Fore.MAGENTA}"
+        f"{Fore.GREEN} Well Done {player}!{Fore.RESET}\n"
+        f" You have completed the category: {Fore.GREEN}"
         f"{category.capitalize()}.{Fore.RESET}\n"
-        f" You managed to get {Fore.MAGENTA}{result}/{total}"
+        f" You managed to get {Fore.GREEN}{result}/{total}"
         f" {Fore.RESET}answers correct.\n"
     )
 
@@ -183,18 +183,18 @@ def new_game(player):
             if answer[0] == "y":
                 clear()
                 print(
-                    f"{Fore.MAGENTA} {player}, thank you for choosing to"
-                    " play again.\n"
-                    " You are now my new best friend!\n"
+                    f"{Fore.YELLOW} Yes{Fore.GREEN} was the CORRECT answer"
+                    f"{Fore.YELLOW} {player}!{Fore.GREEN}\n"
+                    " Thank you for choosing to play again.\n"
                 )
                 print_categories()
                 return True
             elif answer[0] == "n":
                 clear()
                 print(
-                    f" Thank you {Fore.MAGENTA}{player} {Fore.RESET}for"
-                    f" playing {Fore.MAGENTA}QUIZMASTER!{Fore.RESET}\n"
-                    "\n We hope to see you again soon!"
+                    f"{Fore.GREEN} Thank you {Fore.YELLOW}{player}"
+                    f"{Fore.GREEN} for playing {Fore.YELLOW}QUIZMASTER!\n"
+                    f"\n{Fore.GREEN} We hope to see you again soon!"
                 )
                 return False
             else:
@@ -254,7 +254,7 @@ if __name__ == "__main__":
     clear()
 
     print(
-        f"{Fore.MAGENTA} Welcome to QUIZMASTER!\n"
+        f"{Fore.GREEN} Welcome to QUIZMASTER!\n"
         f"\n{Fore.RESET}"
         f"{Fore.CYAN} The rules are simple:\n"
         f"{Fore.RESET}  - Press Enter to submit your responses\n"
