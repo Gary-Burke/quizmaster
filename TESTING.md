@@ -16,7 +16,7 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 ## Responsiveness
 
 > [!NOTE]  
->The Python terminal was provided to me by Code Institute, and there are known issues with it not being responsive. Since I am limited to using this, these problems and their solutions fall outside of this project's scope. Therefore, I have listed the known issues below without further documentation or screenshots.
+>The Python terminal was provided to me by Code Institute, and there are known issues with it. Since I am limited to using this, these problems and their solutions fall outside of this project's scope. Therefore, I have listed the known issues below without further documentation or screenshots.
 
 - `overflow-x` on mobile devices
 - iPhone/Apple devices do not allow users to type anything into the terminal.
@@ -27,14 +27,14 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 ## Browser Compatibility
 
 > [!NOTE]  
->The Python terminal was provided to me by Code Institute, and there are known issues with it not being responsive. Since I am limited to using this, these problems and their solutions fall outside of this project's scope. Therefore, I have listed the known issues below without further documentation or screenshots.
+>The Python terminal was provided to me by Code Institute, and there are known issues with it. Since I am limited to using this, these problems and their solutions fall outside of this project's scope. Therefore, I have listed the known issues below without further documentation or screenshots.
 
 - Safari: doesn't work well for any Apple devices except MacBooks
 
 ## Lighthouse Audit
 
 > [!NOTE]  
->The Python terminal was provided to me by Code Institute, and there are known issues with it not being responsive. Since I am limited to using this, these problems and their solutions fall outside of this project's scope. Therefore, I have listed the known issues below without further documentation or screenshots.
+>The Python terminal was provided to me by Code Institute, and there are known issues with it. Since I am limited to using this, these problems and their solutions fall outside of this project's scope. Therefore, I have listed the known issues below without further documentation or screenshots.
 
 - Mobile: external render-blocking resources & third-party cookies lower performance and best practices scores.
 
